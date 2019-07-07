@@ -19,23 +19,10 @@ animsition@^4.0.2:
   resolved "https://registry.yarnpkg.com/animsition/-/animsition-4.0.2.tgz#d8c6e60b0a5635e3281b962402ca2a5b16b6714e"
   integrity sha1-2MbmCwpWNeMoG5YkAsoqWxa2cU4=
 
-bootstrap@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.0.0.tgz#ceb03842c145fcc1b9b4e15da2a05656ba68469a"
-  integrity sha512-gulJE5dGFo6Q61V/whS6VM4WIyrlydXfCgkE+Gxe5hjrJ8rXLLZlALq7zq2RPhOc45PSwQpJkrTnc2KgD6cvmA==
-
 countdowntime@^0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/countdowntime/-/countdowntime-0.0.3.tgz#5c4d5b4a1d655b6b8911bd12ca7c7db0e61861d2"
   integrity sha512-xuM7uMf68IyrU32/v9iFu4c6DfXY84CSe8nr1GnfhIHEhaQyGQ7pcwT6OkygbYaTiYajs3gqVA4xV+3sZHKgzg==
-
-daterangepicker@^3.0.5:
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/daterangepicker/-/daterangepicker-3.0.5.tgz#97180f233cf9c222cd0767b9c37c2926976d633a"
-  integrity sha512-BoVV+OjVARWNE15iF+3Y2QIMioAD2UODHvJwIq+NtG0vxh61dXRmOMXlw2dsvxS8KY4n5uvIcBfIPiEiiGJcBg==
-  dependencies:
-    jquery ">=1.10"
-    moment "^2.9.0"
 
 dom-walk@^0.1.0:
   version "0.1.1"
@@ -47,16 +34,6 @@ elegant-icons@^0.0.1:
   resolved "https://registry.yarnpkg.com/elegant-icons/-/elegant-icons-0.0.1.tgz#a9d565e904c62e6248ff92cdfdcc7700aff2a634"
   integrity sha1-qdVl6QTGLmJI/5LN/cx3AK/ypjQ=
 
-es6-object-assign@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/es6-object-assign/-/es6-object-assign-1.1.0.tgz#c2c3582656247c39ea107cb1e6652b6f9f24523c"
-  integrity sha1-wsNYJlYkfDnqEHyx5mUrb58kUjw=
-
-font-awesome@^4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/font-awesome/-/font-awesome-4.7.0.tgz#8fa8cf0411a1a31afd07b06d2902bb9fc815a133"
-  integrity sha1-j6jPBBGhoxr9B7BtKQK7n8gVoTM=
-
 global@~4.3.0:
   version "4.3.2"
   resolved "https://registry.yarnpkg.com/global/-/global-4.3.2.tgz#e76989268a6c74c38908b1305b10fc0e394e9d0f"
@@ -64,21 +41,6 @@ global@~4.3.0:
   dependencies:
     min-document "^2.19.0"
     process "~0.5.1"
-
-hamburgers@^1.1.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/hamburgers/-/hamburgers-1.1.3.tgz#eb583ede269d3a774aa5f613442b17ea13952b84"
-  integrity sha512-qpfnJwZq6ATAGJEriwuyfVNgT++GG+o+3bBfPYF7F3WY452cYKbaYGUuqwhp+3kHLI6CL4VIBfj8bfbp90Lp1A==
-
-jquery@>=1.10, jquery@^3.4.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
-  integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
-
-lightbox2@^2.11.0:
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/lightbox2/-/lightbox2-2.11.0.tgz#fe3df40010a732a680296f6f554360f06e0f3bfa"
-  integrity sha512-ABzZ96qKu1KqzVAwrmkXwoW7GWOsR9vLTr7i9UIj36T01euVivDPrGuBl51ZK1UskmdqEkOYKqoYX6pqxBL6Zg==
 
 linearicons@^1.0.1:
   version "1.0.1"
@@ -92,25 +54,10 @@ min-document@^2.19.0:
   dependencies:
     dom-walk "^0.1.0"
 
-moment@^2.9.0:
-  version "2.24.0"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
-  integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
-
-popper.js@^1.15.0:
-  version "1.15.0"
-  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.15.0.tgz#5560b99bbad7647e9faa475c6b8056621f5a4ff2"
-  integrity sha512-w010cY1oCUmI+9KwwlWki+r5jxKfTFDVoadl7MSrIujHU5MJ5OR6HTDj6Xo8aoR/QsA56x8jKjA59qGH4ELtrA==
-
 process@~0.5.1:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/process/-/process-0.5.2.tgz#1638d8a8e34c2f440a91db95ab9aeb677fc185cf"
   integrity sha1-FjjYqONML0QKkduVq5rrZ3/Bhc8=
-
-promise-polyfill@^6.0.2:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/promise-polyfill/-/promise-polyfill-6.1.0.tgz#dfa96943ea9c121fca4de9b5868cb39d3472e057"
-  integrity sha1-36lpQ+qcEh/KTem1hoyznTRy4Fc=
 
 rafl@~1.2.2:
   version "1.2.2"
@@ -118,26 +65,3 @@ rafl@~1.2.2:
   integrity sha1-/pMPdYIRAg1H44gV9Rlqi+QVB0A=
   dependencies:
     global "~4.3.0"
-
-select2@^4.0.7:
-  version "4.0.7"
-  resolved "https://registry.yarnpkg.com/select2/-/select2-4.0.7.tgz#7b80473ef7900f4dc2b988623275fe569204ae8d"
-  integrity sha512-t46Z2nkEEYnBYdRpLNw5dj9qqO+YTiTlWKnpJ/B5e1Q3hPND00JRgcLJxYRzqpeLZd+ZkszkHEMagLKIfbTjVA==
-
-slick-carousel@^1.8.1:
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/slick-carousel/-/slick-carousel-1.8.1.tgz#a4bfb29014887bb66ce528b90bd0cda262cc8f8d"
-  integrity sha512-XB9Ftrf2EEKfzoQXt3Nitrt/IPbT+f1fgqBdoxO3W/+JYvtEOW6EgxnWfr9GH6nmULv7Y2tPmEX3koxThVmebA==
-
-sweetalert@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/sweetalert/-/sweetalert-2.1.2.tgz#010baaa80d0dbdc86f96bfcaa96b490728594b79"
-  integrity sha512-iWx7X4anRBNDa/a+AdTmvAzQtkN1+s4j/JJRWlHpYE8Qimkohs8/XnFcWeYHH2lMA8LRCa5tj2d244If3S/hzA==
-  dependencies:
-    es6-object-assign "^1.1.0"
-    promise-polyfill "^6.0.2"
-
-themify-icons@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/themify-icons/-/themify-icons-1.0.0.tgz#216f330ed1b9c3fdc8e675655e189a0b7ecb1c5c"
-  integrity sha1-IW8zDtG5w/3I5nVlXhiaC37LHFw=

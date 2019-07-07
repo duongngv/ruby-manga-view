@@ -11,12 +11,12 @@
 /storage/*
 !/storage/.keep
 
-/node_modules
+# /node_modules
 /yarn-error.log
 
-/public/assets
+# /public/assets
 .byebug_history
-/public/images
+# /public/images
 
 /config/master.key
 /config/database.yml
