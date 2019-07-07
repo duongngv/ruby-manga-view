@@ -1,4 +1,16 @@
 /*
+ *= require font-awesome
+ *= require select2
+ *= require themify-icons
+ *= require daterangepicker
+ *= require sweetalert
+ *= require slick
+ *= require lightbox
+ *= require main
+ *= require util
+ *= require linearicons/dist/web-font/style
+ *= require elegant-icons/style
+ *= require animate.css/animate
  *= require_tree .
  *= require_self
  */

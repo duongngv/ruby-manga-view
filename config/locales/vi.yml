@@ -1,2 +1,16 @@
 vi:
-  hello: "Xin Chào thế giới"
+  language:
+    en: "Tiếng Anh"
+    vi: "Tiếng Việt"
+  common:
+    logo: "Ứng dụng mẫu"
+    title: "Đọc truyện tranh online miễn phí"
+  layouts:
+    footer:
+      about: "Giới thiệu"
+    header:
+      home: "Trang chủ"
+      login: "Đăng nhập"
+  static_pages:
+    home:
+      content: "Chào mừng đến với Ứng dụng mẫu"

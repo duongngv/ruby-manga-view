@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RubyMangaView</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+    <title><%= t "common.title" %></title>
+    <%= favicon_link_tag asset_path("icons/favicon.png") %>
+    <%= render "layouts/rails_default" %>
+    <%= render "layouts/shim" %>
   </head>
-
   <body>
+    <%= render "layouts/header" %>
     <%= yield %>
+    <%= render "layouts/footer" %>
   </body>
+  <%= render "layouts/rails_default" %>
 </html>
