@@ -1,4 +1,17 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require jquery3
+//= require jquery_ujs
+//= require bootstrap
+//= require popper
+//= require select2
+//= require jquery.slick
+//= require lightbox
+//= require sweetalert
+//= require countdowntime/countdownTime.js
+//= require animsition/dist/js/animsition.min.js
+//= require main
+//= require slick-custom
+//= require backtotop
 //= require_tree .

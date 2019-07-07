@@ -1,2 +1,16 @@
 en:
-  hello: "Hello world"
+  language:
+    en: "English"
+    vi: "Vietnamese"
+  common:
+    logo: "Sample App"
+    title: "Read Manga Online For Free"
+  layouts:
+    footer:
+      about: "About"
+    header:
+      home: "Home"
+      login: "Login"
+  static_pages:
+    home:
+      content: "Welcome to the Sample App"

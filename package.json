@@ -1,5 +1,12 @@
 {
   "name": "ruby-manga-view",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "animate": "^1.0.0",
+    "animate.css": "^3.7.2",
+    "animsition": "^4.0.2",
+    "countdowntime": "^0.0.3",
+    "elegant-icons": "^0.0.1",
+    "linearicons": "^1.0.1"
+  }
 }
