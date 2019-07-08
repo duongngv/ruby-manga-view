@@ -1,17 +1,18 @@
-//= require rails-ujs
 //= require activestorage
 //= require turbolinks
+
 //= require jquery3
 //= require jquery_ujs
-//= require bootstrap
+//= require animsition/dist/js/animsition.js
 //= require popper
+//= require bootstrap
 //= require select2
 //= require jquery.slick
+//= require slick-custom
 //= require lightbox
 //= require sweetalert
-//= require countdowntime/countdownTime.js
-//= require animsition/dist/js/animsition.min.js
 //= require main
-//= require slick-custom
 //= require backtotop
+//= require moment
+//= require daterangepicker
 //= require_tree .
