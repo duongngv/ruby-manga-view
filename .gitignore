@@ -16,6 +16,7 @@
 
 /public/assets
 .byebug_history
+/public/images
 
 /config/master.key
 /config/database.yml
