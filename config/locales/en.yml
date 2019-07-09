@@ -2,6 +2,13 @@ en:
   language:
     en: "English"
     vi: "Vietnamese"
+  activerecord:
+    attributes:
+      user:
+        name: "Full Name"
+        email: "Email Address"
+        password: "Password"
+        password_confirmation: "Confirmation"
   common:
     logo: "Sample App"
     title: "Read Manga Online For Free"
@@ -75,8 +82,10 @@ en:
       error: "Invalid email/password combination"
   shared:
     error_messages:
-      form_error: "The form contains "
-      error: "error"
+      form: "The form contains "
+      error:
+        one: "1 error"
+        other: "%{count} errors"
   admin:
     content_header:
       dashboard: "Dashboard"
@@ -119,3 +128,11 @@ en:
       previous: "&lsaquo; PREV"
       next: "NEXT &rsaquo;"
       truncate: "&hellip;"
+  users:
+    new:
+      signup: "Signup"
+      success: "Signup success"
+      failse: "Signup failse"
+    create:
+      fails: "Signup failse"
+      success: "Signup success"
