@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
 
-  before_action :set_locale
+  before_action :set_locale, :load_category
 
   private
 
@@ -33,5 +33,9 @@ class ApplicationController < ActionController::Base
     store_location
     flash[:danger] = "common.login_require"
     redirect_to login_url
+  end
+
+  def load_category
+    @categories = Category.all
   end
 end

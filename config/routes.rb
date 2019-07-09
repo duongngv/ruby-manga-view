@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     post "signup", to: "users#create"
 
     resources :users, only: %i(show edit create update)
+    resources :categories, only: %i(index show)
 
     namespace :admin do
       root "/admin#index"
@@ -21,6 +22,8 @@ Rails.application.routes.draw do
         resources :chapters, only: %i(index show new create)
       end
       resources :users, concerns: :paginatable, only: %i(index destroy)
+      resources :comics, only: %i(show new create)
+      resources :categories
     end
   end
 end

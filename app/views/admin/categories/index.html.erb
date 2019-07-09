@@ -1,0 +1,71 @@
+<% provide :title, t("admin.categories.index.title") %>
+<div class="col-12">
+  <div class="card">
+    <div class="card-header">
+      <h3 class="card-title title_cate">
+        <font style="vertical-align: inherit;">
+          <font style="vertical-align: inherit;"><%= t "admin.categories.index.list_category" %></font>
+        </font>
+      </h3>
+      <h3 class="add_cate">
+        <%= link_to t("admin.categories.index.add_new"), new_admin_category_path, class: "fa fa-plus-circle" %>
+      </h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th style="width: 10px">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">#</font>
+              </font>
+            </th>
+            <th>
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">
+                  <%= t "admin.categories.index.cate_name" %>
+                </font>
+              </font>
+            </th>
+            <th>
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">
+                  <%= t "admin.categories.index.action" %>
+                </font>
+              </font>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @categories.each do |category| %>
+            <tr>
+              <td>
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">
+                      <%= category.id %>
+                  </font>
+                </font>
+              </td>
+              <td>
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">
+                    <%= category.name %>
+                  </font>
+                </font>
+              </td>
+              <td>
+                <%= link_to t("admin.categories.index.edit"), edit_admin_category_path(category), class: "btn btn-info btn-sm fa fa-pencil" %>
+                <%= link_to t("admin.categories.index.delete"), admin_category_path(category), class: "btn btn-danger btn-sm fa fa-trash", method: :delete,
+                   data: {confirm: t("admin.categories.sure")} %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <!-- /.card-body -->
+    <div class="card-footer clearfix">
+    </div>
+  </div>
+</div>

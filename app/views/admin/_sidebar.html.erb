@@ -42,6 +42,13 @@
             <p><%= t ".list_manga" %></p>
           <% end %>
         </li>
+        <li class="nav-header"><%= t ".mng_category" %></li>
+        <li class="nav-item">
+          <%= link_to admin_categories_path, class: "nav-link" do %>
+            <i class="nav-icon fa fa-file"></i>
+            <p><%= t "admin.categories.index.list_category" %></p>
+          <% end %>
+        </li>
       </ul>
     </nav>
   </div>

@@ -111,6 +111,8 @@ vi:
       list_users: "Danh sách người dùng"
       new_manga: "Đăng manga mới"
       list_manga: "Danh sách Manga"
+      mng_category: "QUẢN LÝ DANH MỤC"
+
     index:
       title: "Dashboards"
       manga: "Manga"
@@ -127,6 +129,24 @@ vi:
       destroy:
         destroy_fail: "Xóa người dùng lỗi"
         destroy_success: "Xóa người thành công"
+    categories:
+      index:
+        title: "Quản lý danh mục"
+        list_category: "Danh sách danh mục"
+        add_new: "Thêm mới"
+        cate_name: "Tên danh mục"
+        action: "Hành động"
+        edit: "Chỉnh sửa"
+        delete: "Xóa bỏ"
+      title: "Thêm thể loại mới"
+      category_name: "Tên thể loại"
+      cancel: "Hủy bỏ"
+      update_succ: "Cập nhật thành công"
+      add_succ: "Thêm mới thành công"
+      add_fails: "Thêm mới thất bại"
+      dele_succ: "Xóa thành công"
+      dele_fails: "Xóa thất bại"
+      sure: "Bạn chắc chắn ?"
     comics:
       comic:
         created: "Được tạo vào ngày "
