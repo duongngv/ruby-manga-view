@@ -23,5 +23,7 @@ module RubyMangaView
     config.i18n.default_locale = :vi
     config.assets.paths << Rails.root.join("vendor", "assets", "fonts")
     config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
+    Bundler.require *Rails.groups
+    Config::Integrations::Rails::Railtie.preload
   end
 end
