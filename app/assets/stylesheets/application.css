@@ -11,6 +11,7 @@
  *= require icon-font.min.css
  *= require elegant-icons/style
  *= require animate.css/animate
+ *= require main_login
  *= require_tree .
  *= require_self
  */

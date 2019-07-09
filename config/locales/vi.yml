@@ -7,12 +7,7 @@ vi:
     title: "Đọc truyện tranh online miễn phí"
     welcome: "Deadline đang đến!"
     read_now: "Đọc ngay"
-  layouts:
-    footer:
-      about: "Giới thiệu"
-    header:
-      home: "Trang chủ"
-      login: "Đăng nhập"
+    not_found: "Không tìm thấy tài khoản"
   static_pages:
     home:
       title: "Trang chủ"
@@ -36,8 +31,14 @@ vi:
   layouts:
     header:
       home: "Trang chủ"
+      login: "Đăng nhập"
       follow: "Theo dõi"
       category: "Thể loại"
+      logout: "Đăng xuất"
+      settings: "Cài đặt chung"
+      profile: "Thông tin của bạn"
+      account: "Tài khoản"
+      signin_as: "Signed in as"
       hot: "Nhiều người đọc"
       blog: "Blog"
       contact: "Liên hệ"
@@ -47,6 +48,7 @@ vi:
       button_left: "Xem tất cả"
       button_right: "Đọc tất cả"
     footer:
+      about: "Giới thiệu"
       get_in_touch: "LIÊN LẠC"
       get_in_touch_content: "Nếu có bất kỳ câu hỏi nào? Hãy đến tầng 9, 343 Trần Khổng Chân, Thành Nhân, Q.Hai Ba Trung, Hà Nội"
       category: "Thể loại"
@@ -58,3 +60,20 @@ vi:
       faqs: "FAQs"
       newsletter: "Nhận tin tức"
       subcribe: "Đăng ký"
+  sessions:
+    new:
+      title: "Đăng nhập"
+      acc_login: "ĐĂNG NHẬP TÀI KHOẢN"
+      email: "Email"
+      password: "Mật khẩu"
+      remember_me: "Nhớ tôi trên trình duyệt này"
+      forgot_password: "Quên Mật khẩu?"
+      button_text: "Đăng nhập"
+      sign_up: "Đăng ký ngay!"
+    create:
+      welcome: "Chào mừng đã trở lại"
+      error: "Thông tin tài khoản hoặc mật khẩu không chính xác"
+  shared:
+    error_messages:
+      form_error: "Biểu mẫu này chứa "
+      error: "lỗi"

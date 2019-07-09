@@ -51,12 +51,35 @@
 
       <!-- Header Icon -->
       <div class="header-icons">
-        <%= link_to "#", class: "header-wrapicon1 dis-block" do %>
-          <%= image_tag "icons/icon-header-01.png", class: "header-icon1", alt: "ICON" %>
+        <% if logged_in? %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <%= t ".account" %><b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item disabled"><%= t ".signin_as" %></li>
+              <li class="dropdown-item">
+                <%= link_to current_user.name, current_user, class: "text font-weight-bold" %>
+              </li>
+              <li class="dropdown-divider"></li>
+              <li class="dropdown-item"><%= link_to t(".profile"), current_user %></li>
+              <li class="dropdown-item"><%= link_to t(".settings"), "#" %></li>
+              <li class="dropdown-divider"></li>
+              <li class="dropdown-item">
+                <%= link_to t(".logout"), logout_path, method: :delete %>
+              </li>
+            </ul>
+          </li>
+        <% else %>
+          <%= link_to login_path, class: "header-wrapicon1 dis-block" do %>
+            <%= image_tag "icons/icon-header-01.png", class: "header-icon1", alt: "ICON" %>
+          <% end %>
         <% end %>
         <span class="linedivide1"></span>
         <div class="header-wrapicon2">
-          <%= image_tag "icons/icon-header-02.png", class: "header-icon1 js-show-header-dropdown", alt: "ICON" %>
+          <%= link_to "#" do %>
+            <%= image_tag "icons/icon-header-02.png", class: "header-icon1 js-show-header-dropdown", alt: "ICON" %>
+          <% end %>
           <span class="header-icons-noti">0</span>
           <!-- Header cart noti -->
           <div class="header-cart header-dropdown">
@@ -120,8 +143,31 @@
     <div class="btn-show-menu">
       <!-- Header Icon mobile -->
       <div class="header-icons-mobile">
-        <%= link_to "#", class: "header-wrapicon1 dis-block" do %>
-          <%= image_tag "icons/icon-header-01.png", class: "header-icon1", alt: "IICON" %>
+        <% if logged_in? %>
+          <li class="dropdown">
+            <%= link_to "#", class: "dropdown-toggle", "data-toggle": "dropdown" do %>
+              <%= t ".account" %><b class="caret"></b>
+            <% end %>
+            <ul class="dropdown-menu">
+              <li class="dropdown-item disabled">
+                <li class="dropdown-item">
+                  <%= link_to current_user.name, current_user, class: "text font-weight-bold" %>
+                </li>
+              </li>
+              <li class="dropdown-item text font-weight-bold"><%= link_to current_user.name, current_user %></li>
+              <li class="dropdown-divider"></li>
+              <li class="dropdown-item"><%= link_to t(".profile"), current_user %></li>
+              <li class="dropdown-item"><%= link_to t(".settings"), "#" %></li>
+              <li class="dropdown-divider"></li>
+              <li class="dropdown-item">
+                <%= link_to t(".logout"), logout_path, method: :delete %>
+              </li>
+            </ul>
+          </li>
+        <% else %>
+          <%= link_to login_path, class: "header-wrapicon1 dis-block" do %>
+            <%= image_tag "icons/icon-header-01.png", class: "header-icon1", alt: "ICON" %>
+          <% end %>
         <% end %>
 
         <span class="linedivide2"></span>
