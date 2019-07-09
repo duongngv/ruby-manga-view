@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_action :load_user, :check_user, only: :show
+  before_action :load_user, only: %i(show update edit)
+  before_action :require_login, :correct_user, only: %i(edit update)
 
   def show; end
 
@@ -19,20 +20,29 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit; end
+
+  def update
+    if @user.update_attributes user_params
+      flash[:success] = t "users.edit.update_succ"
+      redirect_to @user
+    else
+      render :edit
+    end
+  end
+
   private
 
   def user_params
     params.require(:user).permit :name, :email, :password,
-      :password_confirmation
+      :password_confirmation, :avatar_user
   end
 
-  def load_user
+  def correct_user
     @user = User.find_by id: params[:id]
-  end
+    return if @user.current_user? current_user
 
-  def check_user
-    return if load_user
-
-    flash[:danger] = t "common.not_found"
+    flash[:danger] = t "common.admin_require"
+    redirect_to root_url
   end
 end

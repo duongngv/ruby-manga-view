@@ -4,6 +4,7 @@ class User < ApplicationRecord
   has_many :relationships, as: :relationshipable
   has_many :comments, dependent: :destroy
 
+  mount_uploader :avatar_user, AvatarUploader
   validates :name, presence: true,
                    length: {maximum: Settings.user.name.max_length}
   validates :email, presence: true,
