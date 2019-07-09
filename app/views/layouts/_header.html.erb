@@ -33,7 +33,7 @@
             <li><%= link_to "Follow", "#" %></li>
             <li>
               <%= link_to("#") do %>
-                <span>Category &nbsp;</span>
+                <span><%= link_to "Category", category_path %>&nbsp;</span>
                 <i class="fa fa-caret-down"></i>
               <% end %>
               <ul class="sub_menu">
@@ -47,7 +47,7 @@
             <li class="sale-noti"><%= link_to "Hot", "#" %></li>
             <li><%= link_to "Blog", "#" %></li>
             <li><%= link_to "Contact", "#" %></li>
-            <li><%= link_to "About", "#" %></li>
+            <li><%= link_to "About", about_path %></li>
           </ul>
         </nav>
       </div>
@@ -283,7 +283,7 @@
 
         <li class="item-menu-mobile">
           <%= link_to("#") do %>
-            <span>Category &nbsp;</span>
+            <span><%= link_to "Category", category_path %>&nbsp;</span>
             <i class="fa fa-caret-down"></i>
           <% end %>
           <ul class="sub_menu">
@@ -310,7 +310,7 @@
           <%= link_to "Contact", "#" %>
         </li>
         <li class="item-menu-mobile">
-          <%= link_to "About", "#" %>
+          <%= link_to "About", about_path %>
         </li>
       </ul>
     </nav>

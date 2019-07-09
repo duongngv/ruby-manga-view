@@ -8,7 +8,7 @@
  *= require lightbox
  *= require main
  *= require util
- *= require linearicons/dist/web-font/style
+ *= require icon-font.min.css
  *= require elegant-icons/style
  *= require animate.css/animate
  *= require_tree .

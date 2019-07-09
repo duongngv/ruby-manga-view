@@ -1,2 +1,22 @@
 @import 'bootstrap';
+@import 'font-awesome';
+@import 'themify-icons';
+@import 'icon-font.min.css';
+@import 'elegant-icons/style';
+@import 'animate.css/animate';
 @import 'hamburgers';
+@import 'select2';
+@import 'daterangepicker';
+@import 'slick';
+@import 'lightbox';
+@import 'sweetalert';
+@import 'fonts';
+@import 'util';
+@import 'main';
+
+.bg-title-page{
+  background: url('/images/common/about_1920×239.jpg');
+}
+.category_wall{
+  background: url('/images/common/category_1920×239.jpg');
+}

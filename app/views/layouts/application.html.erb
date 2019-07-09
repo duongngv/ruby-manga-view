@@ -11,5 +11,5 @@
     <%= yield %>
     <%= render "layouts/footer" %>
   </body>
-  <%= render "layouts/rails_default" %>
+  <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
 </html>
