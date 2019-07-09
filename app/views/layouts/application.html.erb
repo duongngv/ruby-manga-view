@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= t "common.title" %></title>
+    <title><%= full_title yield :title %></title>
     <%= favicon_link_tag asset_path("icons/favicon.png") %>
     <%= render "layouts/rails_default" %>
     <%= render "layouts/shim" %>

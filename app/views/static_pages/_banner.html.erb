@@ -6,10 +6,9 @@
         <div class="block1 hov-img-zoom pos-relative m-b-30">
           <%= image_tag "/images/720x932-1.png" %>
           <div class="block1-wrapbtn w-size2">
-            <!-- Button -->
-            <a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+            <%= link_to "", class: "flex-c-m size2 m-text2 bg3 hov1 trans-0-4" do %>
               Adventure
-            </a>
+            <% end %>
           </div>
         </div>
 
@@ -18,10 +17,9 @@
           <%= image_tag "/images/720x660-1.jpg" %>
 
           <div class="block1-wrapbtn w-size2">
-            <!-- Button -->
-            <a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
-              Horror
-            </a>
+            <%= link_to "", class: "flex-c-m size2 m-text2 bg3 hov1 trans-0-4" do %>
+              Horro
+            <% end %>
           </div>
         </div>
       </div>
@@ -32,10 +30,9 @@
           <%= image_tag "/images/720x660-2.jpg" %>
 
           <div class="block1-wrapbtn w-size2">
-            <!-- Button -->
-            <a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+            <%= link_to "", class: "flex-c-m size2 m-text2 bg3 hov1 trans-0-4" do %>
               Ecchi
-            </a>
+            <% end %>
           </div>
         </div>
 
@@ -44,10 +41,9 @@
           <%= image_tag "/images/720x932-3.jpg" %>
 
           <div class="block1-wrapbtn w-size2">
-            <!-- Button -->
-            <a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+            <%= link_to "", class: "flex-c-m size2 m-text2 bg3 hov1 trans-0-4" do %>
               Drama
-            </a>
+            <% end %>
           </div>
         </div>
       </div>
@@ -58,10 +54,9 @@
           <%= image_tag "/images/720x932-2.jpg" %>
 
           <div class="block1-wrapbtn w-size2">
-            <!-- Button -->
-            <a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+            <%= link_to "", class: "flex-c-m size2 m-text2 bg3 hov1 trans-0-4" do %>
               Action
-            </a>
+            <% end %>
           </div>
         </div>
 
@@ -71,18 +66,17 @@
 
           <div class="block2-content sizefull ab-t-l flex-col-c-m">
             <h4 class="m-text4 t-center w-size3 p-b-8">
-              Sign up & get 20% off
+              <span><%= t ".sign_up_now" %></span>
             </h4>
 
             <p class="t-center w-size4">
-              Join to receive 10 welcome tickets
+              <%= t ".join_now" %>
             </p>
 
             <div class="w-size2 p-t-25">
-              <!-- Button -->
-              <a href="#" class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
-                Sign Up
-              </a>
+              <%= link_to "#", class: "flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4" do %>
+                <%= t ".sign_up" %>
+              <% end %>
             </div>
           </div>
         </div>

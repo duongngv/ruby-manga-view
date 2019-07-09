@@ -1,78 +1,66 @@
 <footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
   <div class="flex-w p-b-90">
     <div class="w-size6 p-t-30 p-l-15 p-r-15 respon3">
-      <h4 class="s-text12 p-b-30">
-        GET IN TOUCH
-      </h4>
+      <h4 class="s-text12 p-b-30"><%= t ".get_in_touch" %></h4>
 
       <div>
-        <p class="s-text7 w-size27">
-          Any questions? Let us know in store at 9th floor, 343 Tran Khat Chan, Thanh Nhan, Q.Hai Ba Trung, Ha Noi
-        </p>
+        <p class="s-text7 w-size27"><%= t ".get_in_touch_content" %></p>
 
         <div class="flex-m p-t-30">
-          <a href="#" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
-          <a href="#" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
-          <a href="#" class="fs-18 color1 p-r-20 fa fa-pinterest-p"></a>
-          <a href="#" class="fs-18 color1 p-r-20 fa fa-snapchat-ghost"></a>
-          <a href="#" class="fs-18 color1 p-r-20 fa fa-youtube-play"></a>
+          <%= link_to "", "#", class: "topbar-social-item fa fa-facebook" %>
+          <%= link_to "", "#", class: "topbar-social-item fa fa-instagram" %>
+          <%= link_to "", "#", class: "topbar-social-item fa fa-pinterest-p" %>
+          <%= link_to "", "#", class: "topbar-social-item fa fa-snapchat-ghost" %>
+          <%= link_to "", "#", class: "topbar-social-item fa fa-youtube-play" %>
         </div>
       </div>
     </div>
 
     <div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
-      <h4 class="s-text12 p-b-30">
-        Categories
-      </h4>
+      <h4 class="s-text12 p-b-30"><%= t ".category" %></h4>
       <ul>
         <li class="p-b-9">
-          <%= link_to "Action", "#", :class => "s-text7" %>
+          <%= link_to "Action", "#", class: "s-text7" %>
         </li>
         <li class="p-b-9">
-          <%= link_to "Shoune", "#", :class => "s-text7" %>
+          <%= link_to "Shoune", "#", class: "s-text7" %>
         </li>
         <li class="p-b-9">
-          <%= link_to "Horror", "#", :class => "s-text7" %>
+          <%= link_to "Horror", "#", class: "s-text7" %>
         </li>
         <li class="p-b-9">
-          <%= link_to "Ecchi", "#", :class => "s-text7" %>
+          <%= link_to "Ecchi", "#", class: "s-text7" %>
         </li>
       </ul>
     </div>
 
     <div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
-      <h4 class="s-text12 p-b-30">
-        Links
-      </h4>
+      <h4 class="s-text12 p-b-30"><%= t ".links" %></h4>
       <ul>
         <li class="p-b-9">
-          <%= link_to "Search", "#", :class => "s-text7" %>
+          <%= link_to t(".search"), "#", class: "s-text7" %>
         </li>
         <li class="p-b-9">
-          <%= link_to "About us", about_path, :class => "s-text7" %>
+          <%= link_to t(".about_us"), about_path, class: "s-text7" %>
         </li>
         <li class="p-b-9">
-          <%= link_to "Contact us", "#", :class => "s-text7" %>
+          <%= link_to t(".contact_us"), "#", class: "s-text7" %>
         </li>
       </ul>
       </ul>
     </div>
 
     <div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
-      <h4 class="s-text12 p-b-30">
-        Help
-      </h4>
+      <h4 class="s-text12 p-b-30"><%= t ".help" %></h4>
       <ul>
         <li class="p-b-9">
-          <%= link_to "FAQs", "#", :class => "s-text7" %>
+          <%= link_to t(".faqs"), "#", class: "s-text7" %>
         </li>
       </ul>
     </div>
 
     <div class="w-size8 p-t-30 p-l-15 p-r-15 respon3">
-      <h4 class="s-text12 p-b-30">
-        Newsletter
-      </h4>
+      <h4 class="s-text12 p-b-30"><%= t ".newsletter" %></h4>
 
       <form>
         <div class="effect1 w-size9">
@@ -83,7 +71,7 @@
         <div class="w-size2 p-t-20">
           <!-- Button -->
           <button class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
-            Subscribe
+            <%= t ".subcribe" %>
           </button>
         </div>
 

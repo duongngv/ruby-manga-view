@@ -5,6 +5,8 @@ vi:
   common:
     logo: "Ứng dụng mẫu"
     title: "Đọc truyện tranh online miễn phí"
+    welcome: "Deadline đang đến!"
+    read_now: "Đọc ngay"
   layouts:
     footer:
       about: "Giới thiệu"
@@ -13,4 +15,46 @@ vi:
       login: "Đăng nhập"
   static_pages:
     home:
+      title: "Trang chủ"
       content: "Chào mừng đến với Ứng dụng mẫu"
+    about:
+      title: "Giới thiệu"
+      our_story: "Câu chuyện của chúng tôi"
+      content: "Phasellus egestas nisi nisi, lobortis ultricies risus semper nec. Vestibulum pharetra ac ante ut pellentesque. Curabitur fringilla dolor quis lorem accumsan, vitae molestie urna dapibus. Pellentesque porta est ac neque bibendum viverra. Vivamus lobortis magna ut interdum laoreet. Donec gravida lorem elit, quis condimentum ex semper sit amet. Fusce eget ligula magna. Aliquam aliquam imperdiet sodales. Ut fringilla turpis in vehicula vehicula. Pellentesque congue ac orci ut gravida. Aliquam erat volutpat. Donec iaculis lectus a arcu facilisis, eu sodales lectus sagittis. Etiam pellentesque, magna vel dictum rutrum, neque justo eleifend elit, vel tincidunt erat arcu ut sem. Sed rutrum, turpis ut commodo efficitur, quam velit convallis ipsum, et maximus enim ligula ac ligula. Vivamus tristique vulputate ultricies. Sed vitae ultrices orci."
+      content_info: "Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn't really do it, they just saw something. It seemed obvious to them after a while."
+      author: "- Steve Job’s"
+    banner:
+      sign_up: "Đăng ký"
+      sign_up_now: "Đăng ký & nhận ưu đãi"
+      join_now: "Tham gia với chúng tôi ngay để có thể  bình luận và theo dõi truyện"
+    comic_slide:
+      manga_suggest: "Truyện đề cử"
+    banner:
+      sign_up: "Đăng ký"
+      sign_up_now: "Đăng ký & nhận ưu đãi "
+      join_now: "Hãy tham gia cùng với chúng tôi"
+  layouts:
+    header:
+      home: "Trang chủ"
+      follow: "Theo dõi"
+      category: "Thể loại"
+      hot: "Nhiều người đọc"
+      blog: "Blog"
+      contact: "Liên hệ"
+      about: "Giới thiệu"
+      sample_content: "Đây là chữ "
+      total: "Tổng số: 2"
+      button_left: "Xem tất cả"
+      button_right: "Đọc tất cả"
+    footer:
+      get_in_touch: "LIÊN LẠC"
+      get_in_touch_content: "Nếu có bất kỳ câu hỏi nào? Hãy đến tầng 9, 343 Trần Khổng Chân, Thành Nhân, Q.Hai Ba Trung, Hà Nội"
+      category: "Thể loại"
+      links: "Phím tắt"
+      search: "Tìm kiếm"
+      help: "Trợ giúp"
+      about_us: "Về chúng tôi"
+      contact_us: "Liên hệ"
+      faqs: "FAQs"
+      newsletter: "Nhận tin tức"
+      subcribe: "Đăng ký"
