@@ -7,12 +7,7 @@ en:
     title: "Read Manga Online For Free"
     welcome: "Deadline is coming!"
     read_now: "Read now"
-  layouts:
-    footer:
-      about: "About"
-    header:
-      home: "Home"
-      login: "Login"
+    not_found: "User not found"
   static_pages:
     home:
       title: "Home"
@@ -32,8 +27,14 @@ en:
   layouts:
     header:
       home: "Home"
+      login: "Login"
       follow: "Follow"
       category: "Category"
+      logout: "Logout"
+      settings: "Settings"
+      profile: "Your Profile"
+      account: "Account"
+      signin_as: "Signed in as"
       hot: "Hot"
       blog: "Blog"
       contact: "Contact"
@@ -43,6 +44,7 @@ en:
       button_left: "View All"
       button_right: "Read All"
     footer:
+      about: "About"
       get_in_touch: "GET IN TOUCH"
       get_in_touch_content: "Any questions? Let us know in store at 9th floor, 343 Tran Khat Chan, Thanh Nhan, Q.Hai Ba Trung, Ha Noi"
       category: "Category"
@@ -54,3 +56,20 @@ en:
       faqs: "FAQs"
       newsletter: "Newsletter"
       subcribe: "Subscribe"
+    sessions:
+      new:
+        title: "Log in"
+        acc_login: "Account Login"
+        email: "Email"
+        password: "Password"
+        remember_me: "Remember me"
+        forgot_password: "Forgot Password?"
+        button_text: "Log in"
+        sign_up: "Sign up now!"
+      create:
+        welcome: "Welcome back"
+        error: "Invalid email/password combination"
+  shared:
+    error_messages:
+      form_error: "The form contains "
+      error: "error"

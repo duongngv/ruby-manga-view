@@ -5,6 +5,7 @@ user:
     max_length: 255
   password:
     min_length: 8
+  gravatar_size: 80
 category:
   name:
     max_length: 255
