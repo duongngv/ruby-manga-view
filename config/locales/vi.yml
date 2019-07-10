@@ -8,6 +8,10 @@ vi:
     welcome: "Deadline đang đến!"
     read_now: "Đọc ngay"
     not_found: "Không tìm thấy tài khoản"
+    admin_require: "Bạn không thuộc về nơi này"
+    login_require: "Vui lòng đăng nhập trước!"
+    require_confirm: "Bạn đã chắc chưa?"
+    delete: "Xóa"
   static_pages:
     home:
       title: "Trang chủ"
@@ -77,3 +81,45 @@ vi:
     error_messages:
       form_error: "Biểu mẫu này chứa "
       error: "lỗi"
+  admin:
+    content_header:
+      dashboard: "Dashboard"
+      home: "Trang chủ"
+    footer:
+      copyright: "Copyright &copy; 2014-2019 <a href=\"http://adminlte.io\">AdminLTE.io</a>."
+      content: "Đã đăng ký Bản quyền."
+      version: "<b>Phiên bản</b> 3.0.0-beta.2"
+    navbar:
+      home: "Trang chủ"
+      logout: "Đăng xuất"
+    sidebar:
+      title_page: "AdminLTE 3"
+      dashboard: "Dashboard"
+      mng_users: "QUẢN LÝ NGƯỜI DÙNG"
+      mng_manga: "QUẢN LÝ MANGA"
+      list_users: "Danh sách người dùng"
+      new_manga: "Đăng manga mới"
+      list_manga: "Danh sách Manga"
+    index:
+      title: "Dashboards"
+      manga: "Manga"
+      chapter: "Chapter"
+      views: "Lượt xem"
+      options: "Lựa chọn"
+      over_views: "Tổng quan về trang đọc truyện"
+      conversion_rate: "DOANH THU"
+      read_rate: "TỶ LỆ ĐỌC"
+      follow_rate: "TỶ LỆ FOLLOW"
+    users:
+      index:
+        title: "Danh sách người dùng"
+      destroy:
+        destroy_fail: "Xóa người dùng lỗi"
+        destroy_success: "Xóa người thành công"
+  views:
+    pagination:
+      first: "&laquo; Đầu tiên"
+      last: "Cuối cùng &raquo;"
+      previous: "&lsaquo; Trước"
+      next: "Tiếp theo &rsaquo;"
+      truncate: "&hellip;"

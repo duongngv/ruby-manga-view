@@ -14,5 +14,8 @@
 //= require moment
 //= require daterangepicker
 //= require login
+//= require adminlte.min
+//= require dashboard3
+//= require demo
 //= require bootstrap
 //= require turbolinks

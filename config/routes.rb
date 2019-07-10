@@ -7,6 +7,15 @@ Rails.application.routes.draw do
     post "login", to: "sessions#create"
     delete "logout", to: "sessions#destroy"
 
-    resources :users
+    resources :users, except: %i(index destroy)
+
+    namespace :admin do
+      root "/admin#index"
+      concern :paginatable do
+        get "(page/:page)", action: :index, on: :collection, as: ""
+      end
+
+      resources :users, concerns: :paginatable, only: %i(index destroy)
+    end
   end
 end

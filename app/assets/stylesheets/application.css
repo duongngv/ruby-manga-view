@@ -12,6 +12,7 @@
  *= require elegant-icons/style
  *= require animate.css/animate
  *= require main_login
+ *= require adminlte.min.css
  *= require_tree .
  *= require_self
  */

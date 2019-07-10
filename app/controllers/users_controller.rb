@@ -1,14 +1,5 @@
 class UsersController < ApplicationController
-  def show
-    return if load_user
+  before_action :load_user, only: :show
 
-    flash[:danger] = t "common.not_found"
-    redirect_to root_path
-  end
-
-  private
-
-  def load_user
-    @user = User.find_by id: params[:id]
-  end
+  def show; end
 end

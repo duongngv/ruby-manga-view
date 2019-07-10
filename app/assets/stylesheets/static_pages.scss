@@ -1,5 +1,6 @@
 @import 'bootstrap';
 @import 'font-awesome';
+@import 'font-awesome-sprockets';
 @import 'themify-icons';
 @import 'icon-font.min.css';
 @import 'elegant-icons/style';
@@ -14,10 +15,32 @@
 @import 'util';
 @import 'main';
 @import 'main_login';
+@import 'ionicons';
+
+$gray-lighter: #eee;
 
 .bg-title-page{
   background: url('/images/common/about_1920×239.jpg');
 }
 .category_wall{
   background: url('/images/common/category_1920×239.jpg');
+}
+
+.admin-sidebar-text{
+  font-weight: bold;
+  color: white;
+}
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+.custom-logo-admin{
+  opacity: .8
 }
