@@ -1,0 +1,19 @@
+user:
+  name:
+    max_length: 50
+  email:
+    max_length: 255
+  password:
+    min_length: 8
+category:
+  name:
+    max_length: 255
+comment:
+  content:
+    max_length: 500
+comic:
+  name:
+    max_length: 150
+chapter:
+  name:
+    max_length: 50
