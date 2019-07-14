@@ -1,0 +1,48 @@
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <%= link_to "", class: "brand-link"  do %>
+    <%= image_tag "icons/AdminLTELogo.png", class: "brand-image img-circle elevation-3 custom-logo-admin" %>
+    <span class="brand-text font-weight-light"><%= t ".title_page" %></span>
+  <% end %>
+
+  <div class="sidebar">
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="image">
+        <%= image_tag "icons/user2-160x160", class: "img-circle elevation-2" %>
+      </div>
+      <div class="info">
+        <%= link_to current_user.name, "#", class: "d-block" %>
+      </div>
+    </div>
+
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <li class="nav-item">
+          <%= link_to admin_root_path, class: "nav-link active" do %>
+            <i class="nav-icon fa fa-dashboard"></i>
+            <p class="admin-sidebar-text"><%= t ".dashboard" %></p>
+          <% end %>
+        </li>
+        <li class="nav-header"><%= t ".mng_users" %></li>
+        <li class="nav-item">
+          <%= link_to admin_users_path, class: "nav-link" do %>
+            <i class="nav-icon fa fa-users"></i>
+            <p><%= t ".list_users" %></p>
+          <% end %>
+        </li>
+        <li class="nav-header"><%= t ".mng_manga" %></li>
+        <li class="nav-item">
+          <%= link_to "#", class: "nav-link" do %>
+            <i class="nav-icon fa fa-plus-square"></i>
+            <p><%= t ".new_manga" %></p>
+          <% end %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "#", class: "nav-link" do %>
+            <i class="nav-icon fa fa-file"></i>
+            <p><%= t ".list_manga" %></p>
+          <% end %>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</aside>

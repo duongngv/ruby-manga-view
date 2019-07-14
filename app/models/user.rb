@@ -17,6 +17,12 @@ class User < ApplicationRecord
 
   before_create :downcase_fields
 
+  scope :name_alphabet, ->{order(:name)}
+
+  def current_user? user
+    user == self
+  end
+
   private
 
   def downcase_fields

@@ -8,6 +8,10 @@ en:
     welcome: "Deadline is coming!"
     read_now: "Read now"
     not_found: "User not found"
+    admin_require: "You dont't belong there!"
+    login_require: "Please login!"
+    require_confirm: "You sure?"
+    delete: "Delete"
   static_pages:
     home:
       title: "Home"
@@ -56,20 +60,62 @@ en:
       faqs: "FAQs"
       newsletter: "Newsletter"
       subcribe: "Subscribe"
-    sessions:
-      new:
-        title: "Log in"
-        acc_login: "Account Login"
-        email: "Email"
-        password: "Password"
-        remember_me: "Remember me"
-        forgot_password: "Forgot Password?"
-        button_text: "Log in"
-        sign_up: "Sign up now!"
-      create:
-        welcome: "Welcome back"
-        error: "Invalid email/password combination"
+  sessions:
+    new:
+      title: "Log in"
+      acc_login: "Account Login"
+      email: "Email"
+      password: "Password"
+      remember_me: "Remember me"
+      forgot_password: "Forgot Password?"
+      button_text: "Log in"
+      sign_up: "Sign up now!"
+    create:
+      welcome: "Welcome back"
+      error: "Invalid email/password combination"
   shared:
     error_messages:
       form_error: "The form contains "
       error: "error"
+  admin:
+    content_header:
+      dashboard: "Dashboard"
+      home: "Home"
+    footer:
+      copyright: "Copyright &copy; 2014-2019 <a href=\"http://adminlte.io\">AdminLTE.io</a>."
+      content: "All rights reserved."
+      version: "<b>Version</b> 3.0.0-beta.2"
+    navbar:
+      home: "Home"
+      logout: "Log out"
+    sidebar:
+      title_page: "AdminLTE 3"
+      dashboard: "Dashboard"
+      mng_users: "MANAGEMENT USERS"
+      mng_manga: "MANAGEMENT MANGA"
+      list_users: "List Users"
+      new_manga: "New Manga"
+      list_manga: "List Manga"
+    index:
+      title: "Dashboards"
+      manga: "Manga"
+      chapter: "Chapter"
+      views: "Views"
+      options: "Options"
+      over_views: "Online Website Overview"
+      conversion_rate: "CONVERSION RATE"
+      read_rate: "READ RATE"
+      follow_rate: "FOLLWERS RATE"
+    users:
+      index:
+        title: "Users"
+      destroy:
+        destroy_fail: "Destroy user fail"
+        destroy_success: "Destroy user success"
+  views:
+    pagination:
+      first: "&laquo; FIRST"
+      last: "LAST &raquo;"
+      previous: "&lsaquo; PREV"
+      next: "NEXT &rsaquo;"
+      truncate: "&hellip;"
