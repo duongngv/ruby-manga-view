@@ -18,6 +18,7 @@ Rails.application.routes.draw do
       end
 
       resources :users, concerns: :paginatable, only: %i(index destroy)
+      resources :comics, only: %i(show new create)
     end
   end
 end

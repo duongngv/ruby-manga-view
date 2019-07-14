@@ -19,6 +19,12 @@ vi:
     login_require: "Vui lòng đăng nhập trước!"
     require_confirm: "Bạn đã chắc chưa?"
     delete: "Xóa"
+    comic_not_found: "Không tìm thấy truyện"
+  mix:
+    valid_thumb: "nên nhỏ hơn 10MB"
+    message_warning_thumb_size: "Kích thước tệp tối đa là 5MB. Vui lòng chọn một tập tin nhỏ hơn."
+    label_default: "Chọn Ảnh bìa"
+    label_selected: "Thay đổi Ảnh bìa"
   static_pages:
     home:
       title: "Trang chủ"
@@ -123,6 +129,38 @@ vi:
       destroy:
         destroy_fail: "Xóa người dùng lỗi"
         destroy_success: "Xóa người thành công"
+    comics:
+      comic_form:
+        title: "Tạo Truyện tranh Nhật Bản"
+        choose: "Chọn ảnh bìa"
+        description: "Hãy nhập mô tả cơ bản về nội dung truyện"
+        cancel: "Hủy đăng"
+      new:
+        title: "Truyện mới"
+        button_text: "Tạo Truyện"
+      create:
+        success: "Truyện đã được tạo"
+      show:
+        title: "Preview Truyện"
+  shared:
+    error_messages:
+      form_error: "Biểu mẫu này chứa "
+      error: "lỗi"
+  activerecord:
+    errors:
+      models:
+        comic:
+          attributes:
+            category:
+              required: "không thể để trắng"
+    attributes:
+      comic:
+        name: "Tên truyện"
+        author: "Tác giả"
+        thumb: "Ảnh bìa truyện"
+        description: "Nội dụng truyện"
+        category: "Thể loại"
+        publish_date: "Ngày sáng tác"
   views:
     pagination:
       first: "&laquo; Đầu tiên"

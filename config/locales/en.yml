@@ -19,6 +19,12 @@ en:
     login_require: "Please login!"
     require_confirm: "You sure?"
     delete: "Delete"
+    comic_not_found: "Comic not found"
+  mix:
+    valid_thumb: "should be less than 10MB"
+    message_warning_thumb_size: "Maximum file size is 5MB. Please choose a smaller file."
+    label_default: "Choose Cover"
+    label_selected: "Change Cover"
   static_pages:
     home:
       title: "Home"
@@ -121,6 +127,49 @@ en:
       destroy:
         destroy_fail: "Destroy user fail"
         destroy_success: "Destroy user success"
+    comics:
+      comic_form:
+        title: "New Japanese Comic"
+        choose: "Choose Cover"
+        description: "Please enter a basic description of the comic"
+        cancel: "Cancel"
+      new:
+        title: "New Comic"
+        button_text: "Create Comic"
+      create:
+        success: "The comic has been created"
+      show:
+        title: "Preview Comic"
+  shared:
+    error_messages:
+      form_error: "The form contains "
+      error: "error"
+  activerecord:
+    attributes:
+      comic:
+        name: "Comic Name"
+        author: "Author"
+        thumb: "Comic Cover"
+        description: "Comic Story"
+        category: "Category"
+        publish_date: "Publish Date"
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "can't be blank!"
+              too_long: "is too long! (maximum is 50 characters)"
+            email:
+              blank: "can't be blank!"
+              too_long: "is too long! (maximum is 255 characters)"
+              invalid: "is invalid!"
+            password:
+              blank: "can't be blank!"
+              too_short: "is too short! (minimum is 6 characters)"
+            password_confirmation:
+              blank: "can't be blank!"
+              confirmation: "doesn't match Password!"
   views:
     pagination:
       first: "&laquo; FIRST"
