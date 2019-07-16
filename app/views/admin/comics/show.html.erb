@@ -1,8 +1,111 @@
-<% provide :title, t(".title") %>
+<% provide(:title, @comic.name) %>
 
-<%= @comic.name %> <br/>
-<%= @comic.author %><br/>
-<%= @comic.description %><br/>
-<%= @comic.publish_date %><br/>
-<%= @category.name %><br/>
-<%= image_tag @comic.thumb.url if @comic.thumb? %>
+<div class="invoice p-3 mb-3">
+  <div class="row">
+    <div class="col-12">
+      <h4>
+        <i class="fa fa-globe"></i> <%= @comic.name %>
+        <small class="float-right"><%= t "common.created" %>: <%= @comic.created_at.to_date %></small>
+      </h4>
+    </div>
+  </div>
+  <div class="row invoice-info">
+    <div class="col-sm-4 invoice-col">
+      <%= t ".author" %>
+      <address>
+        <strong><%= @comic.author %></strong><br>
+      </address>
+      <% if @comic.publish_date.present? %>
+        <%= t ".publish_date" %>
+        <address>
+          <%= @comic.publish_date %><br>
+        </address>
+      <% end %>
+    </div>
+    <div class="col-sm-4 invoice-col">
+      <%= t ".category" %>
+      <address>
+        <strong><%= @category.name %></strong><br>
+      </address>
+    </div>
+    <div class="col-sm-4 invoice-col">
+      <% if @comic.thumb.present? %>
+        <%= t ".cover" %>
+        <address>
+          <%= image_tag @comic.thumb.url, class: "admin-preview-cover" if @comic.thumb? %>
+        </address>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row">
+    <% if @comic.chapters.any? %>
+      <div class="col-12 table-responsive">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th>Qty</th>
+            <th><%= t ".chapter_name" %></th>
+            <th><%= t ".views" %></th>
+            <th><%= t ".time_upload" %></th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+            <%= render @chapters %>
+          </tbody>
+        </table>
+        <tr>
+            <div class="row">
+              <div class="col-sm-12 col-md-5"></div>
+              <div class="col-sm-12 col-md-7">
+                <div class="custom_paginate">
+                  <%= paginate @chapters, theme: "twitter-bootstrap-4" %>
+                </div>
+              </div>
+            </div>
+          </tr>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <p class="lead"><%= t ".comic_story" %>:</p>
+      <p class="text-muted well well-sm shadow-none" style="margin-top: 10px;">
+        <%= @comic.description %>
+      </p>
+    </div>
+    <div class="col-6">
+      <p class="lead"><%= t ".statistical" %></p>
+
+      <div class="table-responsive">
+        <table class="table">
+          <tr>
+            <th style="width:50%"><%= t ".total_chapter" %>:</th>
+            <td><%= @comic.chapters.size %></td>
+          </tr>
+          <tr>
+            <th><%= t ".total_follower" %>:</th>
+            <td>112</td>
+          </tr>
+          <tr>
+            <th><%= t ".total_views" %>:</th>
+            <td>923</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="row no-print">
+    <div class="col-12">
+      <%= link_to admin_comics_path, class: "btn btn-default" do %>
+        <i class="fa fa-arrow-left"></i> <%= t "common.back" %>
+      <% end %>
+      <%= link_to new_admin_comic_chapter_path(@comic), class: "btn btn-success float-right",  style: "margin-right: 5px;" do %>
+        <i class="fa fa-plus"></i> <%= t ".button_text" %>
+      <% end %>
+    </div>
+  </div>
+</div>

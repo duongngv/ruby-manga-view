@@ -1,7 +1,9 @@
 module UsersHelper
-  def gravatar_for user, size: Settings.user.gravatar_size
-    gravatar_id = Digest::MD5.hexdigest user.email.downcase
-    gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}?s=#{size}"
-    image_tag gravatar_url, alt: user.name, class: "gravatar"
+  def display_avatar user, size = Settings.user.gravatar_size
+    if user.avatar_user.url
+      image_tag(user.avatar_user.to_s, size: "#{size}x#{size}", class: "avatar")
+    else
+      image_tag("avatar-default.png", size: "#{size}x#{size}", class: "avatar")
+    end
   end
 end

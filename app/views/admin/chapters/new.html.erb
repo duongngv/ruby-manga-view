@@ -1,0 +1,60 @@
+<% provide :title, t(".title") %>
+
+<div class="row">
+  <div class="col-md-6">
+    <%= form_for  [:admin, :comic, @chapter] do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+      <div class="card card-primary">
+        <div class="card-header">
+          <h3 class="card-title"><%= t ".form_title" %></h3>
+          <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+              <i class="fa fa-minus"></i></button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <%= f.label :name, t(".name") %>
+            <%= f.text_field :name, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.fields_for :pictures do |p| %>
+              <div class="field">
+                <%= p.label :picture, t(".image_page") %><br>
+                <%= p.file_field :picture, multiple: true, name: "chapter[pictures_attributes][][picture]", class: "upload-image" %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="row no-print">
+        <div class="col-12">
+          <%= link_to admin_comic_path(@chapter.comic), class: "btn btn-secondary" do %>
+            <i class="fa fa-arrow-left"></i> <%= t "common.back" %>
+          <% end %>
+          <%= f.submit t(".button_text"), class: "btn btn-success float-right" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-md-6">
+    <div class="card card-secondary">
+      <div class="card-header">
+        <h3 class="card-title"><%= t "common.preview" %></h3>
+
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+            <i class="fa fa-minus"></i></button>
+          <button type="button" class="btn btn-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+              <i class="fa fa-times"></i></button>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="form-group">
+          <div id="preview"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

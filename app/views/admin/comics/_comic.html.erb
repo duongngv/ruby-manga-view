@@ -1,0 +1,21 @@
+<tr class= "custom-table">
+  <td></td>
+  <td>
+    <%= link_to comic.name, admin_comic_path(comic) %><br/>
+    <small><%= t ".created" %><%= comic.created_at.to_date %></small>
+  </td>
+  <td><%= comic.author %></td>
+  <td><%= get_category comic.category_id %></td>
+  <td><%= comic.chapters.size %></td>
+  <td class="project-actions text-right">
+    <%= link_to admin_comic_path(comic), class: "btn btn-primary btn-sm" do %>
+      <i class="fa fa-folder"></i> <%= t "common.view" %>
+    <% end  %>
+    <%= link_to "#", class: "btn btn-info btn-sm" do %>
+      <i class="fa fa-pencil-alt"></i> <%= t "common.edit" %>
+    <% end  %>
+    <%= link_to "#", class: "btn btn-danger btn-sm" do %>
+      <i class="fa fa-trash"></i> <%= t "common.delete" %>
+    <% end  %>
+  </td>
+</tr>

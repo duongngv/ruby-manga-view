@@ -1,8 +1,15 @@
 class Admin::ComicsController < AdminController
   before_action :load_comic, only: :show
 
+  def index
+    @comics = Comic.name_alphabet.page(params[:page])
+                   .per Settings.comic.per_page
+  end
+
   def show
     @category = Category.find_by id: @comic.category_id
+    @chapters = @comic.chapters.recent_upload.page(params[:page])
+                      .per Settings.chapter.per_page
   end
 
   def new

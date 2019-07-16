@@ -1,0 +1,39 @@
+<% provide :title, t(".title")%>
+
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title"><%= t ".form_title" %></h3>
+
+    <div class="card-tools">
+      <button type="button" class="btn btn-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+        <i class="fa fa-minus"></i></button>
+      <button type="button" class="btn btn-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+        <i class="fa fa-times"></i></button>
+    </div>
+  </div>
+  <div class="card-body p-0">
+    <table class="table table-striped projects">
+      <thead>
+        <tr class= "custom-table">
+          <th>#</th>
+          <th><%= t ".comic_name" %></th>
+          <th><%= t ".author" %></th>
+          <th><%= t ".category" %></th>
+          <th><%= t ".total_chapter" %></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @comics %>
+      </tbody>
+    </table>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-5"></div>
+    <div class="col-sm-12 col-md-7">
+      <div class="custom_paginate">
+        <%= paginate @comics, theme: "twitter-bootstrap-4" %>
+      </div>
+    </div>
+  </div>
+</div>
