@@ -13,3 +13,6 @@ User.create!(name: "Example User",
                password: password,
                password_confirmation: password)
 end
+
+Category.create!(name: "Action")
+Category.create!(name: "Shool life")

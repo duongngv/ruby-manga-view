@@ -16,7 +16,15 @@ comment:
     max_length: 500
 comic:
   name:
-    max_length: 150
+    max_length: 100
+  author:
+    max_length: 100
+  description:
+    max_length: 2000
+  thumb_size: 10
+  thumb:
+    width: 720
+    height: 960
 chapter:
   name:
     max_length: 50

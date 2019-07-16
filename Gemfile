@@ -7,9 +7,11 @@ gem "bcrypt", "~>3.1.7"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap", "~> 4.3.1"
 gem "bootstrap-daterangepicker-rails"
-gem "bootstrap-kaminari-views"
+gem "bootstrap4-kaminari-views"
+gem "carrierwave", "1.2.2"
 gem "config"
 gem "faker"
+gem "i18n-js"
 gem "font-awesome-rails"
 gem "font-awesome-sass", "~> 5.8.1"
 gem "hamburgers"
@@ -19,6 +21,7 @@ gem "jquery-rails"
 gem "jquery-slick-rails"
 gem "kaminari"
 gem "lightbox2-rails"
+gem "mini_magick", "4.7.0"
 gem "momentjs-rails"
 gem "popper_js", "~> 1.14.5"
 gem "puma", "~> 3.11"
@@ -44,6 +47,7 @@ group :development do
 end
 
 group :production do
+  gem "fog", "1.42"
   gem "pg"
 end
 

@@ -13,9 +13,13 @@
 //= require backtotop
 //= require moment
 //= require daterangepicker
-//= require login
+//= require custom
 //= require adminlte.min
 //= require dashboard3
 //= require demo
+//= require jquery.uploadPreview.min.js
+//= require i18n
+//= require i18n.js
+//= require i18n/translations
 //= require bootstrap
 //= require turbolinks

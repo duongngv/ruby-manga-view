@@ -1,0 +1,8 @@
+<% provide :title, t(".title") %>
+
+<%= @comic.name %> <br/>
+<%= @comic.author %><br/>
+<%= @comic.description %><br/>
+<%= @comic.publish_date %><br/>
+<%= @category.name %><br/>
+<%= image_tag @comic.thumb.url if @comic.thumb? %>

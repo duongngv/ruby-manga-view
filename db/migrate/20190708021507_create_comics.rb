@@ -5,8 +5,10 @@ class CreateComics < ActiveRecord::Migration[5.2]
       t.string :author
       t.text :description
       t.string :thumb
-      t.boolean :finished
-      t.integer :views
+      t.date :publish_date
+      t.integer :views, default: 0
+      t.integer :status, default: 0
+      t.integer :category_id
 
       t.timestamps
     end

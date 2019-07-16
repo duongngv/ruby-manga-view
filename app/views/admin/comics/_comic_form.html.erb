@@ -1,0 +1,64 @@
+<%= form_for [:admin, @comic] do |f| %>
+  <div class="card card-default">
+    <div class="card-header">
+      <h3 class="card-title"><%= t ".title" %></h3>
+      <div class="card-tools">
+        <button type="button" class="btn btn-tool" data-widget="collapse">
+          <i class="fa fa-minus"></i>
+        </button>
+      </div>
+      <%= render "shared/error_messages", object: f.object %>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-valid">
+            <%= f.label :name %>
+            <span class="field-validation-valid">(※)</span>
+            <%= f.text_field :name, class: "form-control valid-input1",
+              maxlength: Settings.comic.name.max_length %>
+            <span class="result1">0/<%= Settings.comic.name.max_length %></span>
+          </div>
+
+          <div class="form-valid">
+            <%= f.label :author %>
+            <span class="field-validation-valid">(※)</span>
+            <%= f.text_field :author, class: "form-control valid-input2",
+              maxlength: Settings.comic.author.max_length %>
+            <span class="result2">0/<%= Settings.comic.author.max_length %></span>
+          </div>
+
+          <%= f.label :thumb %>
+          <div id="image-preview">
+            <label for="image-upload" id="image-label"><%= t ".choose" %></label>
+            <%= f.file_field :thumb, accept: "image/jpeg,image/gif,image/png", id: "image-upload" %>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <%= f.label :description %>
+          <span class="field-validation-valid">(※)</span>
+          <div class="field form-valid">
+            <%= f.text_area :description, placeholder: t(".description"),
+              class: "form-control valid-input3 custom-textarea1",
+              maxlength:  Settings.comic.description.max_length %>
+              <span class="result3">0/<%= Settings.comic.description.max_length %></span>
+          </div>
+          <div class="index-15"></div>
+          <%= f.label :category %>
+          <span class="field-validation-valid">(※)</span>
+          <div class="form-group">
+            <%= collection_select(:comic, :category_id, Category.all,
+              :id, :name, {prompt: true} ,{class: "form-control"}) %>
+          </div>
+
+          <%= f.label :publish_date %>
+          <%= f.date_field :publish_date, class: "form-control" %>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+      <%= link_to t(".cancel"), admin_root_path, class: "btn btn-info float-right"  %>
+    </div>
+  </div>
+<% end %>
