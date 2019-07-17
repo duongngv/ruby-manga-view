@@ -2,13 +2,6 @@ en:
   language:
     en: "English"
     vi: "Vietnamese"
-  activerecord:
-    attributes:
-      user:
-        name: "Full Name"
-        email: "Email Address"
-        password: "Password"
-        password_confirmation: "Confirmation"
   common:
     logo: "Sample App"
     title: "Read Manga Online For Free"
@@ -153,6 +146,11 @@ en:
         description: "Comic Story"
         category: "Category"
         publish_date: "Publish Date"
+      user:
+        name: "Full Name"
+        email: "Email Address"
+        password: "Password"
+        password_confirmation: "Confirmation"
     errors:
       models:
         user:
@@ -177,6 +175,7 @@ en:
       previous: "&lsaquo; PREV"
       next: "NEXT &rsaquo;"
       truncate: "&hellip;"
+      error: "error"
   users:
     new:
       signup: "Signup"
@@ -185,3 +184,14 @@ en:
     create:
       fails: "Signup failse"
       success: "Signup success"
+    edit:
+      edit_btn: "Edit Profile"
+      change_pass: "Change Password"
+      change_avt: "Change Profile Photo"
+      save_change: "Save Change"
+      back: "Back"
+      update_succ: "Profile update success"
+      noti_login: "Please login"
+    show:
+      edit_btn: "Edit Profile"
+      following: "following"

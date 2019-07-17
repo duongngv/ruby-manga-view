@@ -2,13 +2,6 @@ vi:
   language:
     en: "Tiếng Anh"
     vi: "Tiếng Việt"
-  activerecord:
-    attributes:
-      user:
-        name: "Họ tên"
-        email: "Địa chỉ email"
-        password: "Mật khẩu"
-        password_confirmation: "Xác nhận mật khẩu"
   common:
     logo: "Ứng dụng mẫu"
     title: "Đọc truyện tranh online miễn phí"
@@ -161,6 +154,11 @@ vi:
         description: "Nội dụng truyện"
         category: "Thể loại"
         publish_date: "Ngày sáng tác"
+      user:
+        name: "Họ tên"
+        email: "Địa chỉ email"
+        password: "Mật khẩu"
+        password_confirmation: "Xác nhận mật khẩu"
   views:
     pagination:
       first: "&laquo; Đầu tiên"
@@ -176,3 +174,15 @@ vi:
     create:
       fails: "Đăng ký thất bại"
       success: "Đăng ký thành công"
+    edit:
+      edit_btn: "Chỉnh sửa hồ sơ"
+      change_pass: "Đổi mật khẩu"
+      change_avt: "Thay đổi ảnh hồ sơ"
+      save_change: "Lưu thay đổi"
+      back: "Quay lại"
+      update_succ: "Cập nhật hồ sơ thành công"
+      noti_login: "Xin vui lòng đăng nhập"
+    show:
+      edit_btn: "Chỉnh sửa hồ sơ"
+      following: "Đang theo dõi"
+

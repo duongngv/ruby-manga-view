@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     get "signup", to: "users#new"
     post "signup", to: "users#create"
 
-    resources :users, except: %i(index destroy)
+    resources :users, only: %i(show edit create update)
 
     namespace :admin do
       root "/admin#index"
