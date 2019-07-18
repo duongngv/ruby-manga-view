@@ -2,7 +2,7 @@ class Comic < ApplicationRecord
   COMIC_ATTR = %i(name author description thumb publish_date
                   views status category_id).freeze
 
-  has_many :relationships, dependent: :destroy
+  has_many :relationships
   has_many :likes, through: :relationships, source: :relationshipable,
                    source_type: :Like
   has_many :comic_followers, through: :relationships,
@@ -23,9 +23,18 @@ class Comic < ApplicationRecord
   mount_uploader :thumb, ThumbUploader
 
   scope :name_alphabet, ->{order :name}
+  scope :newly_create, ->{order created_at: :desc}
+  scope :popular, ->{order views: :desc}
+  scope :latest_update, ->{order updated_at: :desc}
+  scope :finished, ->{where status: Settings.comic.finished}
   scope :by_category, ->(id){joins(:category).merge(where(category_id: id))}
 
-  enum status: {newly_created: 0, newly_update: 1, hot: 2, finished: 3}
+  enum status: {
+    newly_created: Settings.comic.created,
+    newly_update: Settings.comic.updated,
+    hot: Settings.comic.hot,
+    finished: Settings.comic.finished
+  }
 
   private
 

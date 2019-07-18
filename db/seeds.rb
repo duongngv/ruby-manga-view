@@ -13,7 +13,7 @@ User.create!(
   is_admin: false,
 )
 
-50.times do |n|
+25.times do |n|
   name = Faker::Name.name
   email = Faker::Internet.email
   password = "password"
@@ -33,8 +33,8 @@ name_categories.each do |category|
   Category.create!(name: name)
 end
 
-50.times do
-  Comic.create!(
+20.times do
+  comic = Comic.create!(
     name: Faker::Book.title,
     author: Faker::Book.author,
     description: Faker::Food.description,
@@ -44,8 +44,38 @@ end
     category_id: Faker::Number.between(Category.first.id, Category.last.id),
     remote_thumb_url: "https://fakeimg.pl/720x960/"
   )
+  15.times do |n|
+    chapter = Chapter.create!(
+      name: "Chapter " << n.to_s << ": " << Faker::Book.title,
+      comic_id: comic.id,
+    )
+    15.times do
+      Picture.create!(
+        chapter_id: chapter.id,
+        remote_picture_url: "https://fakeimg.pl/920x1300/"
+      )
+    end
+  end
 end
 
+30.times do
+  comic = Comic.create!(
+    name: Faker::Book.title,
+    author: Faker::Book.author,
+    description: Faker::Food.description,
+    publish_date: Faker::Time.between("2000-01-01", Time.now),
+    views: Faker::Number.between(1, 1000) * 789,
+    status: Faker::Number.between(0, 3),
+    category_id: Faker::Number.between(Category.first.id, Category.last.id),
+    remote_thumb_url: "https://fakeimg.pl/720x960/",
+  )
+  50.times do |n|
+    Chapter.create!(
+      name: "Chapter " << n.to_s << ": " << Faker::Book.title,
+      comic_id: comic.id,
+    )
+  end
+end
 Comic.create!(
   name: "ONE PIECE - ĐẢO HẢI TẶC",
   author: "Eiichiro Oda",

@@ -10,6 +10,9 @@ Rails.application.routes.draw do
 
     resources :users, only: %i(show edit create update)
     resources :categories, only: %i(index show)
+    resources :comics, only: %i(index show) do
+      resources :chapters, only: %i(index show)
+    end
 
     namespace :admin do
       root "/admin#index"
@@ -17,8 +20,8 @@ Rails.application.routes.draw do
         get "(page/:page)", action: :index, on: :collection, as: ""
       end
 
-      resources :comics, only: %i(index show new create) do
-        resources :chapters, only: %i(index show new create)
+      resources :comics do
+        resources :chapters, only: %i(index show new create destroy)
       end
       resources :users, concerns: :paginatable, only: %i(index destroy)
       resources :comics, only: %i(show new create)

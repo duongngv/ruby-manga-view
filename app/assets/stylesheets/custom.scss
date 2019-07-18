@@ -134,3 +134,10 @@ h3.add_cate{
   width: 50%;
   float: left;
 }
+.box {
+  max-height: 500px;
+  overflow-y: auto;
+}
+.alert-admin{
+  padding-bottom:0px !important;
+}
