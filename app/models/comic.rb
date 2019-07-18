@@ -22,7 +22,7 @@ class Comic < ApplicationRecord
 
   scope :recent_comic, ->{order(created_at: :desc)}
 
-  enum status: {newly_created: 0, newly_update: 2, hot: 3, finished: 4}
+  enum status: {newly_created: 0, newly_update: 1, hot: 2, finished: 3}
 
   private
 
