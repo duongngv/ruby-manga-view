@@ -58,6 +58,7 @@ en:
       total: "Total: 4"
       button_left: "View All"
       button_right: "Read All"
+      switch_admin_page: "Switch Admin"
     footer:
       about: "About"
       get_in_touch: "GET IN TOUCH"
@@ -101,6 +102,7 @@ en:
     navbar:
       home: "Home"
       logout: "Log out"
+      user_home_pape: "Switch User"
     sidebar:
       title_page: "AdminLTE 3"
       dashboard: "Dashboard"
