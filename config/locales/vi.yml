@@ -38,7 +38,13 @@ vi:
       sign_up_now: "Đăng ký & nhận ưu đãi"
       join_now: "Tham gia với chúng tôi ngay để có thể  bình luận và theo dõi truyện"
     comic_slide:
-      manga_suggest: "Truyện đề cử"
+      manga_updated: "Mới cập nhật"
+    our_comic:
+      title: "Tất cả truyện tranh"
+      popular: "Phổ biến"
+      latest_update: "Mới cập nhật"
+      recommended: "Đề cử"
+      finished: "Đã hoàn thành"
     banner:
       sign_up: "Đăng ký"
       sign_up_now: "Đăng ký & nhận ưu đãi "

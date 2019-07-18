@@ -23,8 +23,17 @@ class Comic < ApplicationRecord
   mount_uploader :thumb, ThumbUploader
 
   scope :name_alphabet, ->{order :name}
+  scope :newly_create, ->{order created_at: :desc}
+  scope :popular, ->{order views: :desc}
+  scope :latest_update, ->{order updated_at: :desc}
+  scope :finished, ->{where status: Settings.comic.finished}
 
-  enum status: {newly_created: 0, newly_update: 1, hot: 2, finished: 3}
+  enum status: {
+    newly_created: Settings.comic.created,
+    newly_update: Settings.comic.updated,
+    hot: Settings.comic.hot,
+    finished: Settings.comic.finished
+  }
 
   private
 

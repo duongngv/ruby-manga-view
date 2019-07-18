@@ -38,7 +38,13 @@ en:
       sign_up_now: "Sign up & get deals"
       join_now: "Join to receive 10 welcome tickets"
     comic_slide:
-      manga_suggest: "Manga Suggestions"
+      manga_updated: "Latest Update"
+    our_comic:
+      title: "All Japaneses Comic"
+      popular: "Popular Manga"
+      latest_update: "Latest Update"
+      recommended: "Recommended"
+      finished: "Finished"
   layouts:
     header:
       home: "Home"
