@@ -34,7 +34,7 @@ name_categories.each do |category|
 end
 
 50.times do
-  Comic.create!(
+  comic = Comic.create!(
     name: Faker::Book.title,
     author: Faker::Book.author,
     description: Faker::Food.description,
@@ -44,8 +44,14 @@ end
     category_id: Faker::Number.between(Category.first.id, Category.last.id),
     remote_thumb_url: "https://fakeimg.pl/720x960/"
   )
+  n=0
+  50.times do
+    Chapter.create!(
+      name: "Chapter " << (n=n+1).to_s << ": " << Faker::Book.title,
+      comic_id: comic.id,
+    )
+  end
 end
-
 Comic.create!(
   name: "ONE PIECE - ĐẢO HẢI TẶC",
   author: "Eiichiro Oda",

@@ -207,10 +207,10 @@ vi:
         password_confirmation: "Xác nhận mật khẩu"
   views:
     pagination:
-      first: "&laquo; Đầu tiên"
-      last: "Cuối cùng &raquo;"
-      previous: "&lsaquo; Trước"
-      next: "Tiếp theo &rsaquo;"
+      first: "&laquo;"
+      last: " &raquo;"
+      previous: "&lsaquo;"
+      next: "&rsaquo;"
       truncate: "&hellip;"
   users:
     new:
@@ -231,3 +231,24 @@ vi:
     show:
       edit_btn: "Chỉnh sửa hồ sơ"
       following: "Đang theo dõi"
+  comics:
+    show:
+      updated_at: "Cập nhật ngày"
+      author: "Tác giả"
+      status: "Tình trạng"
+      continue: "Đang tiến hành"
+      finished: "Đã hoàn thành"
+      statistic: "Thống kê"
+      views: "Lượt xem"
+      follow: "Theo dõi"
+      followers: "người dã theo dõi"
+      first_read: "Đọc từ đầu"
+      unfollow: "Hủy theo dõi"
+      last_read: "Đọc tiếp"
+      like: "Thích"
+      content: "Nội dung"
+      list_chapter: "Danh sách chương"
+      comment: "bình luận"
+      trendding_title: "Top tháng"
+      tags: "Thẻ"
+      by_admin: "Đăng bởi Admin"

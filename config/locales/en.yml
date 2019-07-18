@@ -216,10 +216,10 @@ en:
               confirmation: "doesn't match Password!"
   views:
     pagination:
-      first: "&laquo; FIRST"
-      last: "LAST &raquo;"
-      previous: "&lsaquo; PREV"
-      next: "NEXT &rsaquo;"
+      first: "&laquo;"
+      last: "&raquo;"
+      previous: "&lsaquo;"
+      next: "&rsaquo;"
       truncate: "&hellip;"
       error: "error"
   users:
@@ -241,3 +241,24 @@ en:
     show:
       edit_btn: "Edit Profile"
       following: "following"
+  comics:
+    show:
+      updated_at: "updated at"
+      author: "Author"
+      status: "Status"
+      continue: "Ongoing"
+      finished: "Completed"
+      statistic: "Statistic"
+      views: "Views"
+      follow: "Follow"
+      followers: "follwers"
+      first_read: "Read First"
+      unfollow: "Unfollow"
+      last_read: "Read Last"
+      like: "Like"
+      content: "Sumary"
+      list_chapter: "Latest manga releases"
+      comment: "comment"
+      trendding_title: "Monthly trending"
+      tags: "Tags"
+      by_admin: "By Admin"

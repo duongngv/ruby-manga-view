@@ -10,6 +10,9 @@ Rails.application.routes.draw do
     post "signup", to: "users#create"
 
     resources :users, only: %i(show edit create update)
+    resources :comics, only: %i(index show) do
+      resources :chapters, only: %i(index show)
+    end
 
     namespace :admin do
       root "/admin#index"

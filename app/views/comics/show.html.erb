@@ -1,0 +1,196 @@
+<% provide :title, @comic.name %>
+
+<section class="bgwhite p-t-60">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 col-lg-9 p-b-75">
+        <div class="p-r-50 p-r-0-lg">
+          <div class="item-blog p-b-10">
+            <div id="item-detail">
+              <h1 class="title-detail">
+                <%= @comic.name %>
+              </h1>
+              <time class="small">
+                [<%= t ".updated_at" %>: <%= @comic.updated_at.to_date %>]
+              </time>
+              <div class="detail-info">
+                <div class="row">
+                  <div class="col-md-5 col-xs-5 col-image">
+                    <%= link_to "", class: "item-blog-img pos-relative dis-block hov-img-zoom" do %>
+                      <% if @comic.thumb.present? %>
+                        <%= image_tag @comic.thumb.url %>
+                      <% else %>
+                        <%= image_tag "comic-default.png" %>
+                      <% end %>
+                      <% if @comic.publish_date.present? %>
+                        <span class="item-blog-date dis-block flex-c-m pos1 size17 bg4 s-text1">
+                          <%= @comic.publish_date %>
+                        </span>
+                      <% end %>
+                    <% end %>
+                  </div>
+                  <div class="col-md-7 col-xs-7 col-info">
+                    <ul class="list-info">
+                      <li class="author row">
+                        <p class="name col-md-4 col-xs-4 text-custom-detail">
+                          <i class="fa fa-user"></i>&nbsp;<%= t ".author" %>
+                        </p>
+                        <p class="col-md-8 col-xs-8">
+                          <%= link_to @comic.author, "#" %>
+                        </p>
+                      </li>
+                      <li class="status row">
+                        <p class="name col-md-4 col-xs-4 text-custom-detail">
+                          <i class="fa fa-rss"></i>&nbsp;<%= t ".status" %>
+                        </p>
+                        <% if "finished" == @comic.status %>
+                          <p class="col-md-8 col-xs-8 text-danger"><%= t ".finished" %></p>
+                        <% else %>
+                          <p class="col-md-8 col-xs-8 text-warning"><%= t ".continue" %></p>
+                        <% end %>
+                      </li>
+                      <li class="status row">
+                        <p class="name col-md-4 col-xs-4 text-custom-detail">
+                          <i class="fa fa-tags"></i>&nbsp;<%= t ".statistic" %>
+                        </p>
+                        <p class="col-md-8 col-xs-8">
+                          <span class="sp01"><i class="fa fa-thumbs-up"></i>
+                          <span class="sp02 number-like">5339&emsp;
+                          <span class="sp01"><i class="fa fa-heart"></i>
+                          <span class="sp02">37,591&emsp;
+                        </p>
+                      </li>
+                      <li class="row">
+                        <p class="name col-md-4 col-xs-4 text-custom-detail">
+                          <i class="fa fa-eye"></i>&nbsp;<%= t ".views" %>
+                        </p>
+                        <p class="col-md-8 col-xs-8"><%= @comic.views %>&emsp;</p>
+                      </li>
+                      <li class="row">
+                        <p class="name col-md-4 col-xs-4 text-custom-detail">
+                          <i class="fa fa-heart"></i>&nbsp;<%= t ".follow" %>
+                        </p>
+                        <p class="col-md-8 col-xs-8 "><b>487</b>
+                          <span class="text-secondary"> <%= t ".followers" %></span>
+                        </p>
+                      </li>
+                      <li class="kind row">
+                        <p class="name col-md-12 col-xs-12 text-custom-detail">
+                          <%= link_to "#", class: "btn btn-sm btn-outline-secondary" do %>
+                            <%= @category.name %>
+                          <% end %>
+                        </p>
+                      </li>
+                    </ul>
+                    <div class="read-action mrt10 liparent row">
+                      <div class="col-md-7">
+                        <li class="li01">
+                          <%= link_to "#" do %>
+                            <i class="fa fa-book"></i>&nbsp;<%= t ".first_read" %>
+                          <% end %>
+                        </li>
+                        <li class="li02">
+                          <%= link_to "#" do %>
+                            <i class="fa fa-heart"></i>&nbsp;<%= t ".unfollow" %>
+                          <% end %>
+                        </li>
+                      </div>
+                      <div class="col-md-5">
+                        <li class="li04">
+                          <%= link_to "#" do %>
+                            <i class="fa fa-paper-plane"></i>&nbsp;<%= t ".last_read" %>
+                          <% end %>
+                        </li>
+                        <li class="li03">
+                          <%= link_to "#" do %>
+                            <i class="fa fa-thumbs-up"></i>&nbsp;<%= t ".like" %>
+                          <% end %>
+                        </li>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="detail-content">
+                        <h3 class="list-title">
+                          <i class="fa fa-file-text-o"></i>&nbsp;<%= t ".content" %>
+                        </h3>
+                        <p><%= @comic.description %></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="item-blog p-b-20">
+            <div class="item-blog-txt p-t-33 block02">
+              <div class="title p-b-11">
+                  <h2 class="story-detail-title m-text24"><%= t ".list_chapter" %></h2>
+              </div>
+              <div class="s-text8 flex-w flex-m p-b-21">
+                <span>
+                  <%= t ".by_admin" %><span class="m-l-3 m-r-6">|</span>
+                </span>
+                <span>
+                  <%= @category.name %><span class="m-l-3 m-r-6">|</span>
+                </span>
+                <span>8 <%= t ".comment" %></span>
+              </div>
+              <% if @comic.chapters.any? %>
+                <div class="box">
+                  <div class="works-chapter-list">
+                    <%= render @chapters %>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12 col-md-1"></div>
+                    <div class="col-sm-12 col-md-11">
+                      <div class="custom_paginate float-right">
+                        <%= paginate @chapters, theme: "twitter-bootstrap-4" %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-lg-3 p-b-75">
+        <div class="rightbar">
+          <h4 class="m-text23 p-t-65 p-b-34">
+            <%=  t ".trendding_title" %>
+          </h4>
+          <ul class="bgwhite">
+            <% @trendding.each do |item| %>
+              <li class="flex-w p-b-20">
+                <%= link_to "#", class: "dis-block wrap-pic-w w-size22 m-r-20 trans-0-4 hov4" do %>
+                  <% if item.thumb.present? %>
+                    <%= image_tag item.thumb.url, class: "trendding_thumb" %>
+                  <% else %>
+                    <%= image_tag "comic-default.png", class: "trendding_thumb" %>
+                  <% end %>
+                <% end %>
+                <div class="w-size23 p-t-5">
+                  <%= link_to "#", class: "s-text20" do %>
+                    <%= item.name %>
+                  <% end %>
+                </div>
+              </li>
+            <% end %>
+          </ul>
+          <h4 class="m-text23 p-t-50 p-b-25">
+            <%= t ".tags" %>
+          </h4>
+          <div class="wrap-tags flex-w">
+            <%= link_to "Fashion", "#", class: "tag-item" %>
+            <%= link_to "Action", "#", class: "tag-item" %>
+            <%= link_to "Shounen", "#", class: "tag-item" %>
+            <%= link_to "Horro", "#", class: "tag-item" %>
+            <%= link_to "Echhi", "#", class: "tag-item" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
