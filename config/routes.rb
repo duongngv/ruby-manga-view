@@ -17,8 +17,10 @@ Rails.application.routes.draw do
         get "(page/:page)", action: :index, on: :collection, as: ""
       end
 
+      resources :comics, only: %i(index show new create) do
+        resources :chapters, only: %i(index show new create)
+      end
       resources :users, concerns: :paginatable, only: %i(index destroy)
-      resources :comics, only: %i(show new create)
     end
   end
 end

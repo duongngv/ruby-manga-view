@@ -12,7 +12,12 @@ en:
     login_require: "Please login!"
     require_confirm: "You sure?"
     delete: "Delete"
+    view: "View"
+    edit: "Edit"
+    back: "Back"
+    preview: "Preview"
     comic_not_found: "Comic not found"
+    chapter_not_found: "Chapter not found"
   mix:
     valid_thumb: "should be less than 10MB"
     message_warning_thumb_size: "Maximum file size is 5MB. Please choose a smaller file."
@@ -121,18 +126,51 @@ en:
         destroy_fail: "Destroy user fail"
         destroy_success: "Destroy user success"
     comics:
+      comic:
+        created: "Created "
       comic_form:
         title: "New Japanese Comic"
         choose: "Choose Cover"
         description: "Please enter a basic description of the comic"
         cancel: "Cancel"
+      index:
+        title: "List Japanese Comic"
+        form_title: "Comics"
+        comic_name: "Comic Name"
+        author: "Author"
+        category: "Category"
+        total_chapter: "Total Chapter"
+      show:
+        title: "Preview Comic"
+        author: "Author"
+        category: "Category"
+        total_chapter: "Total Chapter"
+        publish_date: "Publish Date"
+        cover: "Cover"
+        chapter_name: "Chapter Name"
+        views: "Views"
+        time_upload: "Time uploaded"
+        comic_story: "Comics story"
+        statistical: "Statistical"
+        total_follower: "Total Follower"
+        total_views: "Total Views"
+        button_text: "Upload Chapter"
       new:
         title: "New Comic"
         button_text: "Create Comic"
       create:
         success: "The comic has been created"
+    chapters:
+      new:
+        title: "Upload Chapter"
+        form_title: "Upload New Chapter"
+        name: "Chapter Name"
+        image_page: "Image Page"
+        button_text: "Upload Chapter"
+      create:
+        success: "Chapter was successfully uploaded!"
       show:
-        title: "Preview Comic"
+        empty: "Huhmm! Chapter is empty!"
   shared:
     error_messages:
       form_error: "The form contains "

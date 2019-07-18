@@ -1,0 +1,28 @@
+<% provide :title, @chapter.name %>
+
+<div class="card card-solid">
+  <div class="card-body pb-0">
+    <% if @chapter.pictures.present? %>
+      <% @chapter.pictures.each do |p| %>
+        <div class="row d-flex align-items-stretch">
+          <div class="col-12 col-sm-12 col-md-12 d-flex align-items-stretch">
+            <div class="card bg-light">
+              <%= image_tag p.picture_url, class: "center" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <center><h4><%= t ".empty" %></h4></center>
+    <% end %>
+  </div>
+  <div class="card-footer">
+    <div class="row no-print">
+      <div class="col-12">
+        <%= link_to  admin_comic_path(@chapter.comic), class: "btn btn-secondary" do %>
+          <i class="fa fa-arrow-left"></i> <%= t "common.back" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

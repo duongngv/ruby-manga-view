@@ -12,7 +12,12 @@ vi:
     login_require: "Vui lòng đăng nhập trước!"
     require_confirm: "Bạn đã chắc chưa?"
     delete: "Xóa"
+    view: "Xem"
+    edit: "Sửa"
+    back: "Trở lại"
+    preview: "Preview"
     comic_not_found: "Không tìm thấy truyện"
+    chapter_not_found: "Không tìm thấy chapter"
   mix:
     valid_thumb: "nên nhỏ hơn 10MB"
     message_warning_thumb_size: "Kích thước tệp tối đa là 5MB. Vui lòng chọn một tập tin nhỏ hơn."
@@ -123,18 +128,51 @@ vi:
         destroy_fail: "Xóa người dùng lỗi"
         destroy_success: "Xóa người thành công"
     comics:
+      comic:
+        created: "Được tạo vào ngày "
       comic_form:
         title: "Tạo Truyện tranh Nhật Bản"
         choose: "Chọn ảnh bìa"
         description: "Hãy nhập mô tả cơ bản về nội dung truyện"
         cancel: "Hủy đăng"
+      index:
+        title: "Danh sách truyện tranh Nhật Bản"
+        form_title: "Truyện tranh "
+        comic_name: "Tên Truyện"
+        author: "Tác giả"
+        category: "Thể loại"
+        total_chapter: "Tổng số Chapter"
+      show:
+        title: "Preview truyện"
+        author: "Tác giả"
+        category: "Thể loại"
+        total_chapter: "Tổng số Chapter"
+        publish_date: "Ngày xuất bản"
+        cover: "Ảnh bìa"
+        chapter_name: "Tên Chapter"
+        views: "Lượt xem"
+        time_upload: "Thời gian đăng"
+        comic_story: "Mô tả nội dung truyện"
+        statistical: "Thống kê"
+        total_follower: "Tông số lượt theo dõi"
+        total_views: "Tổng số lượt xem"
+        button_text: "Đăng Chapter"
       new:
         title: "Truyện mới"
         button_text: "Tạo Truyện"
       create:
         success: "Truyện đã được tạo"
+    chapters:
+      new:
+        title: "Đăng Chapter"
+        form_title: "Đăng Chapter mới"
+        name: "Tên Chapter"
+        image_page: "Trang truyện"
+        button_text: "Đăng Chapter"
+      create:
+        success: "Chapter đã được đăng thành công!"
       show:
-        title: "Preview Truyện"
+        empty: "Huhmm! Chapter này không có tý ảnh nào!"
   shared:
     error_messages:
       form_error: "Biểu mẫu này chứa "
@@ -185,4 +223,3 @@ vi:
     show:
       edit_btn: "Chỉnh sửa hồ sơ"
       following: "Đang theo dõi"
-

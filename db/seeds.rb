@@ -20,7 +20,7 @@ User.create!(
   User.create!(
     name: name,
     email: email,
-    avatar_user: "https://randomuser.me/api/portraits/#{["men", "women"].sample}/#{n}.jpg",
+    remote_avatar_user_url: "https://randomuser.me/api/portraits/#{["men", "women"].sample}/#{n}.jpg",
     password: password,
     password_confirmation: password,
   )
@@ -42,6 +42,7 @@ end
     views: Faker::Number.between(1, 1000) * 789,
     status: Faker::Number.between(0, 3),
     category_id: Faker::Number.between(Category.first.id, Category.last.id),
+    remote_thumb_url: "https://fakeimg.pl/720x960/"
   )
 end
 
