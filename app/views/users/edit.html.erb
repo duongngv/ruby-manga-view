@@ -13,10 +13,10 @@
         <%= render "shared/error_messages", object: f.object %>
         <div class="form-group row">
           <div class="col-sm-3 col-form-label avatar">
-            <% if @user.avatar_user?%>
+             <% if @user.avatar_user.present? %>
               <%= image_tag @user.avatar_user.to_s, class: "avatar" %>
             <% else %>
-              <%= image_tag "default-image", class: "avatar" %>
+              <%= image_tag "avatar-default.png", class: "avatar" %>
             <% end %>
           </div>
           <div class="col-sm-9">
