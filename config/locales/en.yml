@@ -111,6 +111,7 @@ en:
       list_users: "List Users"
       new_manga: "New Manga"
       list_manga: "List Manga"
+      mng_category: "MANAGEMENT CATEGORY"
     index:
       title: "Dashboards"
       manga: "Manga"
@@ -127,6 +128,24 @@ en:
       destroy:
         destroy_fail: "Destroy user fail"
         destroy_success: "Destroy user success"
+    categories:
+      index:
+        title: "Category manager"
+        list_category: "List Category"
+        add_new: "Add new"
+        cate_name: "Category name"
+        action: "Action"
+        edit: "Edit"
+        delete: "Delete"
+      title: "Add new category"
+      category_name: "Category name"
+      cancel: "Cancel"
+      update_succ: "Update success"
+      add_succ: "Add new success"
+      add_fails: "Add new fails"
+      dele_succ: "Delete success"
+      dele_fails: "Delete fails"
+      sure: "You sure ?"
     comics:
       comic:
         created: "Created "
