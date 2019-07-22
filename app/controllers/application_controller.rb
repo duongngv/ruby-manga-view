@@ -31,11 +31,11 @@ class ApplicationController < ActionController::Base
     return if logged_in?
 
     store_location
-    flash[:danger] = "common.login_require"
+    flash[:danger] = t "common.login_require"
     redirect_to login_url
   end
 
   def load_category
-    @categories = Category.all
+    @categories = Category.sort_by_name
   end
 end

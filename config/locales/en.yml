@@ -252,3 +252,10 @@ en:
     show:
       edit_btn: "Edit Profile"
       following: "following"
+  categories:
+    form:
+      read: "Read more"
+    show:
+      category: "Category"
+      new_cate: "New Comics Collection 2019"
+      filters: "Filters"
