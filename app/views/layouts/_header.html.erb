@@ -30,12 +30,12 @@
             <li><%= link_to t(".follow"), "#" %></li>
             <li>
               <%= link_to("#") do %>
-                <span><%= link_to t(".category"), categories_path %>&nbsp;</span>
+                <span><%= link_to t(".category"), "#" %>&nbsp;</span>
                 <i class="fa fa-caret-down"></i>
               <% end %>
               <ul class="sub_menu">
                 <% @categories.each do |category| %>
-                  <li><%= link_to category.name %></li>
+                  <li><%= link_to category.name, category_path(category) %></li>
                 <% end %>
               </ul>
             </li>
@@ -272,15 +272,15 @@
 
         <li class="item-menu-mobile">
           <%= link_to("#") do %>
-            <span><%= link_to t(".category"), category_path %>&nbsp;</span>
+            <span><%= link_to t(".category"), "#" %>&nbsp;</span>
             <i class="fa fa-caret-down"></i>
           <% end %>
           <ul class="sub_menu">
-            <li><%= link_to "Action", "#" %></li>
-            <li><%= link_to "Adventure", "#" %></li>
-            <li><%= link_to "Harem", "#" %></li>
-            <li><%= link_to "School Life", "#" %></li>
-            <li><%= link_to "Drama", "#" %></li>
+            <% @categories.each do |category| %>
+              <li>
+                <%= link_to category.name, category_path(category) %>
+              </li>
+            <% end %>
           </ul>
           <i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
         </li>

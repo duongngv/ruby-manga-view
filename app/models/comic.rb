@@ -23,6 +23,7 @@ class Comic < ApplicationRecord
   mount_uploader :thumb, ThumbUploader
 
   scope :name_alphabet, ->{order :name}
+  scope :by_category, ->(id){joins(:category).merge(where(category_id: id))}
 
   enum status: {newly_created: 0, newly_update: 1, hot: 2, finished: 3}
 

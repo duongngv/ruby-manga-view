@@ -245,3 +245,10 @@ vi:
     show:
       edit_btn: "Chỉnh sửa hồ sơ"
       following: "Đang theo dõi"
+  categories:
+    form:
+      read: "Đọc ngay"
+    show:
+      category: "Thể loại"
+      new_cate: "Bộ sưu tập truyện tranh mới 2019"
+      filters: "Bộ lọc"
