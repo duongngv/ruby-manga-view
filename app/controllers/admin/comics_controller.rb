@@ -1,8 +1,8 @@
 class Admin::ComicsController < AdminController
-  before_action :load_comic, only: :show
+  before_action :load_comic, only: %i(show edit update destroy)
 
   def index
-    @comics = Comic.name_alphabet.page(params[:page])
+    @comics = Comic.newly_create.page(params[:page])
                    .per Settings.comic.per_page
   end
 
@@ -27,6 +27,26 @@ class Admin::ComicsController < AdminController
     end
   end
 
+  def edit; end
+
+  def update
+    if @comic.update_attributes comic_params
+      flash[:success] = t ".success"
+      redirect_to admin_comics_path
+    else
+      flash.now[:danger] = t ".failed"
+      render :edit
+    end
+  end
+
+  def destroy
+    if @comic.destroy
+      flash[:success] = t ".success"
+    else
+      flash[:danger] = t ".failed"
+    end
+    redirect_to admin_comics_path
+  end
   private
 
   def comic_params

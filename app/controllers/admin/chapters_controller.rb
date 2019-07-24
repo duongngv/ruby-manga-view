@@ -1,6 +1,6 @@
 class Admin::ChaptersController < AdminController
-  before_action :load_chapter, only: :show
-  before_action :load_comic, only: %i(new create)
+  before_action :load_chapter, only: %i(show destroy)
+  before_action :load_comic, only: %i(new create destroy)
 
   def index
     @chapters = @comic.chapters.sort_by_name.page(params[:page])
@@ -23,6 +23,15 @@ class Admin::ChaptersController < AdminController
     else
       render :new
     end
+  end
+
+  def destroy
+    if @chapter.destroy
+      flash[:success] = t ".success"
+    else
+      flash[:danger] = t ".failed"
+    end
+    redirect_to admin_comic_path(@comic)
   end
 
   private

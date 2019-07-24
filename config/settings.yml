@@ -25,9 +25,20 @@ comic:
   thumb:
     width: 720
     height: 960
-  per_page: 5
+  per_page: 10
+  slide_per_page: 10
+  popular_per_page: 12
+  latest_update_per_page: 8
+  recommended_per_page: 8
+  finised_per_page: 16
+  trendding_right: 5
+  created: 0
+  updated: 1
+  hot: 2
+  finished: 3
 chapter:
   name:
-    max_length: 50
-  per_page: 5
+    max_length: 100
+  per_page: 10
+  for_user_per_page: 25
   per_page_default: 10

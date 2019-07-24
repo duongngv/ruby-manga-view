@@ -65,17 +65,29 @@
           <%= image_tag "icons/bg-01.jpg" %>
 
           <div class="block2-content sizefull ab-t-l flex-col-c-m">
-            <h4 class="m-text4 t-center w-size3 p-b-8">
-              <span><%= t ".sign_up_now" %></span>
-            </h4>
+            <% unless logged_in? %>
+              <h4 class="m-text4 t-center w-size3 p-b-8">
+                <span><%= t ".sign_up_now" %></span>
+              </h4>
 
-            <p class="t-center w-size4">
-              <%= t ".join_now" %>
-            </p>
+              <p class="t-center w-size4">
+                <%= t ".join_now" %>
+              </p>
+            <% else %>
+              <h4 class="m-text4 t-center w-size3 p-b-8">
+                <span><%= t ".alright" %></span>
+              </h4>
+
+              <p class="t-center w-size4">
+                <%= t ".alright_content" %>
+              </p>
+            <% end %>
 
             <div class="w-size2 p-t-25">
-              <%= link_to signup_path, class: "flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4" do %>
-                <%= t ".sign_up" %>
+              <% unless logged_in? %>
+                <%= link_to signup_path, class: "flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4" do %>
+                  <%= t ".sign_up" %>
+                <% end %>
               <% end %>
             </div>
           </div>

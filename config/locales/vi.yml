@@ -1,6 +1,6 @@
 vi:
   language:
-    en: "Tiếng Anh"
+    en: "English"
     vi: "Tiếng Việt"
   common:
     logo: "Ứng dụng mẫu"
@@ -37,12 +37,16 @@ vi:
       sign_up: "Đăng ký"
       sign_up_now: "Đăng ký & nhận ưu đãi"
       join_now: "Tham gia với chúng tôi ngay để có thể  bình luận và theo dõi truyện"
+      alright: "Chào mừng đến với MangaB"
+      alright_content: "Đọc truyện manga miến phí với chất lượng tốt nhất và đầy đủ nhất"
     comic_slide:
-      manga_suggest: "Truyện đề cử"
-    banner:
-      sign_up: "Đăng ký"
-      sign_up_now: "Đăng ký & nhận ưu đãi "
-      join_now: "Hãy tham gia cùng với chúng tôi"
+      manga_updated: "Mới cập nhật"
+    our_comic:
+      title: "Tất cả truyện tranh"
+      popular: "Phổ biến"
+      latest_update: "Mới cập nhật"
+      recommended: "Đề cử"
+      finished: "Đã hoàn thành"
   layouts:
     header:
       home: "Trang chủ"
@@ -86,6 +90,7 @@ vi:
       forgot_password: "Quên Mật khẩu?"
       button_text: "Đăng nhập"
       sign_up: "Đăng ký ngay!"
+      login_alright: "Bạn đã đăng nhập rồi"
     create:
       welcome: "Chào mừng đã trở lại"
       error: "Thông tin tài khoản hoặc mật khẩu không chính xác"
@@ -114,7 +119,6 @@ vi:
       new_manga: "Đăng manga mới"
       list_manga: "Danh sách Manga"
       mng_category: "QUẢN LÝ DANH MỤC"
-
     index:
       title: "Dashboards"
       manga: "Manga"
@@ -130,7 +134,7 @@ vi:
         title: "Danh sách người dùng"
       destroy:
         destroy_fail: "Xóa người dùng lỗi"
-        destroy_success: "Xóa người thành công"
+        destroy_success: "Người dùng vừa được xóa thành công!"
     categories:
       index:
         title: "Quản lý danh mục"
@@ -153,7 +157,6 @@ vi:
       comic:
         created: "Được tạo vào ngày "
       comic_form:
-        title: "Tạo Truyện tranh Nhật Bản"
         choose: "Chọn ảnh bìa"
         description: "Hãy nhập mô tả cơ bản về nội dung truyện"
         cancel: "Hủy đăng"
@@ -179,11 +182,25 @@ vi:
         total_follower: "Tông số lượt theo dõi"
         total_views: "Tổng số lượt xem"
         button_text: "Đăng Chapter"
+      edit:
+        title: "Sửa truyện"
+        button_text: "Cập nhật"
+      update:
+        success: "Truyện vừa được cập nhật thành công!"
+        failed: "Truyện chưa thể cập nhật, có một vài lỗi!"
       new:
         title: "Truyện mới"
         button_text: "Tạo Truyện"
+        title_box: "Tạo Truyện tranh Nhật Bản"
       create:
         success: "Truyện đã được tạo"
+      edit:
+        title: "Sửa truyện"
+        button_text: "Cập nhật"
+        title_box: "Sửa Truyện tranh Nhật Bản"
+      destroy:
+        success: "Truyện vừa được xóa thành công!"
+        failed: "Truyện chưa xóa được, có một vài lỗi!"
     chapters:
       new:
         title: "Đăng Chapter"
@@ -195,6 +212,9 @@ vi:
         success: "Chapter đã được đăng thành công!"
       show:
         empty: "Huhmm! Chapter này không có tý ảnh nào!"
+      destroy:
+        success: "Chapter vừa được xóa thành công!"
+        failed: "Chapter chưa xóa được, có một vài lỗi!"
   shared:
     error_messages:
       form_error: "Biểu mẫu này chứa "
@@ -221,10 +241,10 @@ vi:
         password_confirmation: "Xác nhận mật khẩu"
   views:
     pagination:
-      first: "&laquo; Đầu tiên"
-      last: "Cuối cùng &raquo;"
-      previous: "&lsaquo; Trước"
-      next: "Tiếp theo &rsaquo;"
+      first: "&laquo;"
+      last: " &raquo;"
+      previous: "&lsaquo;"
+      next: "&rsaquo;"
       truncate: "&hellip;"
   users:
     new:
@@ -252,3 +272,32 @@ vi:
       category: "Thể loại"
       new_cate: "Bộ sưu tập truyện tranh mới 2019"
       filters: "Bộ lọc"
+  comics:
+    show:
+      updated_at: "Cập nhật ngày"
+      author: "Tác giả"
+      status: "Tình trạng"
+      continue: "Đang tiến hành"
+      finished: "Đã hoàn thành"
+      statistic: "Thống kê"
+      views: "Lượt xem"
+      follow: "Theo dõi"
+      followers: "người dã theo dõi"
+      first_read: "Đọc từ đầu"
+      unfollow: "Hủy theo dõi"
+      last_read: "Đọc tiếp"
+      like: "Thích"
+      content: "Nội dung"
+      list_chapter: "Danh sách chương"
+      comment: "bình luận"
+      trendding_title: "Top tháng"
+      tags: "Thẻ"
+      by_admin: "Đăng bởi Admin"
+      empty: "Đã up tập nào đâu mà đòi có :v"
+  chapters:
+    show:
+      home: "Trang chủ"
+      empty: "Huhmm! Chapter này không có ảnh nào!"
+      report_error: "Báo lỗi"
+      turn_light: "Bật đèn"
+      unfollow: "Huỷ theo dõi"

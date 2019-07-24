@@ -1603,7 +1603,9 @@ li.sale-noti > a {
 /*[ Block2 ]
 ///////////////////////////////////////////////////////////
 */
-.block2-labelsale::before,
+.block2-labelhot::before,
+.block2-labelupdated::before,
+.block2-labelfinished::before,
 .block2-labelnew::before
 {
   z-index: 100;
@@ -1617,7 +1619,7 @@ li.sale-noti > a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
+  width: 65px;
   height: 22px;
   border-radius: 11px;
   position: absolute;
@@ -1625,13 +1627,23 @@ li.sale-noti > a {
   left: 12px;
 }
 
-.block2-labelsale::before {
-  background-color: #e65540;
-  content: 'Sale';
+.block2-labelhot::before {
+  background-color:#fa0d0a;
+  content: 'Hot';
+}
+
+.block2-labelupdated::before {
+  background-color: #6666ff;
+  content: 'Updated';
+}
+
+.block2-labelfinished::before {
+  background-color: #083603;
+  content: 'Finished';
 }
 
 .block2-labelnew::before {
-  background-color: #66a8a6;
+  background-color: #666699;
   content: 'New';
 }
 

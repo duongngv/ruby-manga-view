@@ -15,9 +15,11 @@
     <div class="col-md-8 basic-info">
       <div class="user-wrapper">
         <h2 class="username"><%= @user.name %></h2>
-        <button>
-          <%= link_to t("users.show.edit_btn"), edit_user_path(current_user), class: "edit-profile" %>
-        </button>
+        <% if current_user.present? && @user.current_user?(current_user) %> |
+          <button>
+            <%= link_to t("users.show.edit_btn"), edit_user_path(current_user), class: "edit-profile" %>
+          </button>
+        <% end %>
       </div>
       <ul class="posts">
         <li><%= t "users.show.following" %> <span>195</span></li>

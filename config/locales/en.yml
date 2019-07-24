@@ -1,7 +1,7 @@
 en:
   language:
     en: "English"
-    vi: "Vietnamese"
+    vi: "Tiếng Việt"
   common:
     logo: "Sample App"
     title: "Read Manga Online For Free"
@@ -33,12 +33,20 @@ en:
       content: "Phasellus egestas nisi nisi, lobortis ultricies risus semper nec. Vestibulum pharetra ac ante ut pellentesque. Curabitur fringilla dolor quis lorem accumsan, vitae molestie urna dapibus. Pellentesque porta est ac neque bibendum viverra. Vivamus lobortis magna ut interdum laoreet. Donec gravida lorem elit, quis condimentum ex semper sit amet. Fusce eget ligula magna. Aliquam aliquam imperdiet sodales. Ut fringilla turpis in vehicula vehicula. Pellentesque congue ac orci ut gravida. Aliquam erat volutpat. Donec iaculis lectus a arcu facilisis, eu sodales lectus sagittis. Etiam pellentesque, magna vel dictum rutrum, neque justo eleifend elit, vel tincidunt erat arcu ut sem. Sed rutrum, turpis ut commodo efficitur, quam velit convallis ipsum, et maximus enim ligula ac ligula. Vivamus tristique vulputate ultricies. Sed vitae ultrices orci."
       content_info: "Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn't really do it, they just saw something. It seemed obvious to them after a while."
       author: "- Steve Job’s"
-      banner:
+    banner:
       sign_up: "Sign Up"
       sign_up_now: "Sign up & get deals"
       join_now: "Join to receive 10 welcome tickets"
+      alright: "Welcome to MangaB"
+      alright_content: "Read manga online for free in high quality and most full"
     comic_slide:
-      manga_suggest: "Manga Suggestions"
+      manga_updated: "Latest Update"
+    our_comic:
+      title: "All Japaneses Comic"
+      popular: "Popular Manga"
+      latest_update: "Latest Update"
+      recommended: "Recommended"
+      finished: "Finished"
   layouts:
     header:
       home: "Home"
@@ -82,6 +90,7 @@ en:
       forgot_password: "Forgot Password?"
       button_text: "Log in"
       sign_up: "Sign up now!"
+      login_alright: "You are logged in"
     create:
       welcome: "Welcome back"
       error: "Invalid email/password combination"
@@ -127,7 +136,7 @@ en:
         title: "Users"
       destroy:
         destroy_fail: "Destroy user fail"
-        destroy_success: "Destroy user success"
+        destroy_success: "User was successfully deleted!"
     categories:
       index:
         title: "Category manager"
@@ -140,17 +149,16 @@ en:
       title: "Add new category"
       category_name: "Category name"
       cancel: "Cancel"
-      update_succ: "Update success"
+      update_succ: "Category was successfully uploaded!"
       add_succ: "Add new success"
       add_fails: "Add new fails"
-      dele_succ: "Delete success"
+      dele_succ: "Category was successfully deleted!"
       dele_fails: "Delete fails"
       sure: "You sure ?"
     comics:
       comic:
         created: "Created "
       comic_form:
-        title: "New Japanese Comic"
         choose: "Choose Cover"
         description: "Please enter a basic description of the comic"
         cancel: "Cancel"
@@ -176,11 +184,25 @@ en:
         total_follower: "Total Follower"
         total_views: "Total Views"
         button_text: "Upload Chapter"
+      edit:
+        title: "Edit Comic"
+        button_text: "Update"
+      update:
+        success: "Comic was successfully updated!"
+        failed: "Comic update failed!"
       new:
         title: "New Comic"
         button_text: "Create Comic"
+        title_box: "New Japanese Comic"
       create:
         success: "The comic has been created"
+      edit:
+        title: "Update Comic"
+        button_text: "Update Comic"
+        title_box: "Update Japanese Comic"
+      destroy:
+        success: "Comic was successfully deleted!"
+        failed: "Comic deleted failed!"
     chapters:
       new:
         title: "Upload Chapter"
@@ -192,6 +214,9 @@ en:
         success: "Chapter was successfully uploaded!"
       show:
         empty: "Huhmm! Chapter is empty!"
+      destroy:
+        success: "Chapter was successfully deleted!"
+        failed: "Chapter deleted failed!"
   shared:
     error_messages:
       form_error: "The form contains "
@@ -229,10 +254,10 @@ en:
               confirmation: "doesn't match Password!"
   views:
     pagination:
-      first: "&laquo; FIRST"
-      last: "LAST &raquo;"
-      previous: "&lsaquo; PREV"
-      next: "NEXT &rsaquo;"
+      first: "&laquo;"
+      last: "&raquo;"
+      previous: "&lsaquo;"
+      next: "&rsaquo;"
       truncate: "&hellip;"
       error: "error"
   users:
@@ -249,7 +274,7 @@ en:
       change_avt: "Change Profile Photo"
       save_change: "Save Change"
       back: "Back"
-      update_succ: "Profile update success"
+      update_succ: "Profile was successfully uploaded!"
       noti_login: "Please login"
     show:
       edit_btn: "Edit Profile"
@@ -261,3 +286,32 @@ en:
       category: "Category"
       new_cate: "New Comics Collection 2019"
       filters: "Filters"
+  comics:
+    show:
+      updated_at: "updated at"
+      author: "Author"
+      status: "Status"
+      continue: "Ongoing"
+      finished: "Completed"
+      statistic: "Statistic"
+      views: "Views"
+      follow: "Follow"
+      followers: "follwers"
+      first_read: "Read First"
+      unfollow: "Unfollow"
+      last_read: "Read Last"
+      like: "Like"
+      content: "Sumary"
+      list_chapter: "Latest manga releases"
+      comment: "comment"
+      trendding_title: "Monthly trending"
+      tags: "Tags"
+      by_admin: "By Admin"
+      empty: ":D Coming soon!"
+  chapters:
+    show:
+      home: "Home"
+      empty: "Huhmm! Chapter is empty!"
+      report_error: "Report"
+      turn_light: "Turn light"
+      unfollow: "Unfollow"

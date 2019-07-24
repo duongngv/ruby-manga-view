@@ -6,11 +6,9 @@
   <td class="project-actions text-right">
     <%= link_to admin_comic_chapter_path(chapter.comic, chapter), class: "btn btn-primary btn-sm" do %>
       <i class="fa fa-folder"></i> <%= t "common.view" %>
-    <% end  %>
-    <%= link_to "#", class: "btn btn-info btn-sm" do %>
-      <i class="fa fa-pencil"></i> <%= t "common.edit" %>
-    <% end  %>
-    <%= link_to "#", class: "btn btn-danger btn-sm" do %>
+    <% end %>
+    <%= link_to admin_comic_chapter_path(chapter.comic, chapter), method: :delete,
+      data: { confirm: t("common.require_confirm") }, class: "btn btn-danger btn-sm" do %>
       <i class="fa fa-trash"></i> <%= t "common.delete" %>
     <% end  %>
   </td>

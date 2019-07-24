@@ -5,7 +5,7 @@ document.addEventListener('turbolinks:load', function () {
     $('#image-upload').bind('change', function () {
       var size_in_megabytes = this.files[0].size / 1024 / 1024;
       if (size_in_megabytes > 5) {
-        alert(I18n.t("mix.message_warning_thumb_size"));
+        alert(I18n.t('mix.message_warning_thumb_size'));
       }
     });
 
@@ -79,5 +79,17 @@ document.addEventListener('turbolinks:load', function () {
         [].forEach.call(files, readAndPreview);
       }
     })
-  })
+  });
+  $('.story-see-footer').hide();
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function () {
+    var currentScrollpos = window.pageYOffset;
+    if (prevScrollpos > currentScrollpos) {
+      document.getElementById('nav-scroll').style.bottom = '0';
+      $('.story-see-footer').show();
+    } else {
+      document.getElementById('nav-scroll').style.bottom = '-100px';
+    }
+    prevScrollpos = currentScrollpos;
+  }
 });

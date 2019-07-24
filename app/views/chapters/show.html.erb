@@ -1,0 +1,99 @@
+<% provide :title, @chapter.name %>
+
+<div class="main-content">
+  <div class="pc-banner-full"></div>
+  <div class="story-see">
+    <div class="story-see-main">
+      <div class="box-detail">
+        <div id="path" class="path-top">
+          <ol class="breadcrumb">
+            <li itemprop="itemListElement">
+              <%= link_to root_path do %>
+                <span itemprop="name"><%= t ".home" %></span>
+              <% end %>
+              <meta itemprop="position" content="1">
+            </li>
+            <li itemprop="itemListElement">
+              <%= link_to "#" do %>
+                <span itemprop="name">Comics Name here</span>
+              <% end %>
+              <meta itemprop="position" content="2">
+            </li>
+            <li itemprop="itemListElement">
+              <%= link_to "#" do %>
+                <span itemprop="name"><%= @chapter.name %></span>
+              <% end %>
+              <meta itemprop="position" content="3">
+            </li>
+          </ol>
+        </div>
+        <h1 class="detail-title">
+          <%= link_to "Comic Name here", "#" %> - <span></span>
+          <%= @chapter.name %>
+        </h1>
+      </div>
+      <div class="story-see-content">
+        <% if @chapter.pictures.present? %>
+          <% @chapter.pictures.each do |p| %>
+            <%= image_tag p.picture_url, class: "center" %>
+          <% end %>
+        <% else %>
+          <center><h4 class="text-danger"><%= t ".empty" %></h4></center>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <section class="story-see-footer has-background-white on" id= "nav-scroll">
+    <div class="container">
+      <div class="level">
+        <div class="level-left">
+          <ul class="list-01">
+            <li>
+              <%= link_to root_path do %>
+                <i class="fa fa-home"></i>
+                <span class="control-see"><%= t ".home" %></span>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#", id: "faul" do %>
+                <i class="fa fa-exclamation-circle"></i>
+                <span class="control-see"><%= t ".report_error" %></span>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+        <div class="center level">
+          <%= link_to "#" ,class: "disable" do %>
+            <i class="fa fa-arrow-circle-left"></i>
+          <% end %>
+          <select class="selectEpisode">
+            <option selected="selected" value="#">
+              <%= @chapter.name %>
+            </option>
+          </select>
+          <div class="next level-right">
+            <%= link_to "#", class: "link-next-chap" do %>
+              <i class="fa fa-arrow-circle-right"></i>
+            <% end %>
+          </div>
+        </div>
+        <div class="level-right">
+          <ul class="list-01">
+            <li>
+              <%= link_to "#", class: "light-see" do %>
+                <i class="fa fa-adjust"></i>
+                <span class="control-see"><%= t ".turn_light" %></span>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#", class: "subscribeBook" do %>
+                <i class="fa fa-heart"></i>
+                <span class="control-see"><%= t ".unfollow" %></span>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

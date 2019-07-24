@@ -1,7 +1,12 @@
 class SessionsController < ApplicationController
   before_action :load_user, only: :create
 
-  def new; end
+  def new
+    return unless logged_in?
+
+    flash[:warning] = t ".login_alright"
+    redirect_to root_url
+  end
 
   def create
     if @user&.authenticate(params[:session][:password])
