@@ -8,6 +8,8 @@ class ChaptersController < ApplicationController
 
   def show
     @comment = @chapter.comments.build
+    @comments = @chapter.comments.order_comments.page(params[:page])
+                        .per Settings.comment.page_comment
   end
 
   private
