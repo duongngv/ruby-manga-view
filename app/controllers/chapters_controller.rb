@@ -6,7 +6,9 @@ class ChaptersController < ApplicationController
                       .per Settings.chapter.per_page_default
   end
 
-  def show; end
+  def show
+    @comment = @chapter.comments.build
+  end
 
   private
 

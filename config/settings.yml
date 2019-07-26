@@ -46,4 +46,6 @@ chapter:
 factories:
   comic:
     description: 100
+  comment:
+    content: 500
 follow: "Follow"

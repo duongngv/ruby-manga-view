@@ -307,3 +307,7 @@ vi:
       report_error: "Báo lỗi"
       turn_light: "Bật đèn"
       unfollow: "Huỷ theo dõi"
+  add_comment: "Thêm bình luận ..."
+  post: "Đăng"
+  commented: "Đã bình luận"
+  comment_for: "Bình luận về"

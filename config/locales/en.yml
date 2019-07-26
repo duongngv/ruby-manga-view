@@ -321,3 +321,7 @@ en:
       report_error: "Report"
       turn_light: "Turn light"
       unfollow: "Unfollow"
+  add_comment: "Add comment ..."
+  post: "Post"
+  commented: "Commented"
+  comment_for: "Comment for"
