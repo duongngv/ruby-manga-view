@@ -325,12 +325,19 @@ en:
       report_error: "Report"
       turn_light: "Turn light"
       unfollow: "Unfollow"
-  add_comment: "Add comment ..."
-  post: "Post"
-  commented: "Commented"
-  comment_for: "Comment for"
+      add_comment: "Add comment ..."
+      post: "Post"
+      comment_for: "Comment for"
   relationships:
     load_comic:
       not_found: "Comic is not found!"
     get_comic:
       not_found: "Comic is not found!"
+  comments:
+    destroy:
+      delete_failed: "Delete failed!!"
+    comment:
+      del: "Delete"
+      delete_confirm: "You sure?"
+    correct_comment:
+      not_found: "Comment not found!!"
