@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if @user&.authenticate(params[:session][:password])
+    if @user && @user.authenticate(params[:session][:password])
       flash[:success] = t ".welcome"
       log_in @user
       if current_user.is_admin?
