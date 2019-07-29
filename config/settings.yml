@@ -42,3 +42,6 @@ chapter:
   per_page: 10
   for_user_per_page: 25
   per_page_default: 10
+factories:
+  comic:
+    description: 100
