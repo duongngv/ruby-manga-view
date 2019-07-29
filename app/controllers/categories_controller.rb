@@ -4,7 +4,8 @@ class CategoriesController < ApplicationController
   def index; end
 
   def show
-    @comics = Comic.by_category(params[:id])
+    @comics = Comic.by_category(params[:id]).page(params[:page])
+                   .per Settings.category.per_page
   end
 
   private

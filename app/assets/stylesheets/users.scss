@@ -581,3 +581,7 @@ h2.story-detail-title {
     outline: 0;
   }
 }
+
+.dropdown-toggle::after {
+  display: none !important;
+}

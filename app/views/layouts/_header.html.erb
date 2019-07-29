@@ -9,7 +9,7 @@
         <%= link_to "", "#", class: "topbar-social-item fa fa-snapchat-ghost" %>
         <%= link_to "", "#", class: "topbar-social-item fa fa-youtube-play" %>
       </div>
-      <span class="topbar-child1"><%= t "common.welcome" %></span>
+      <span class="topbar-child1"><%= t "common.title" %></span>
       <div class="topbar-child2">
         <span class="topbar-email">
           <%= link_to_unless I18n.locale == :en, t("language.en"), locale: :en %> |
@@ -39,7 +39,6 @@
                 <% end %>
               </ul>
             </li>
-            <li class="sale-noti"><%= link_to "Hot", "#" %></li>
             <li><%= link_to t(".blog"), "#" %></li>
             <li><%= link_to t(".contact"), "#" %></li>
             <li><%= link_to t(".about"), about_path %></li>
@@ -52,11 +51,11 @@
         <% if logged_in? %>
           <% if current_user.is_admin? %>
             <li><%= link_to t(".switch_admin_page"), admin_root_path %></li>
+            <span class="linedivide1"></span>
           <% end %>
-          <span class="linedivide1"></span>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <%= t ".account" %><b class="caret"></b>
+            <a href="#" class="dropdown-toggle header-wrapicon1 dis-block" data-toggle="dropdown">
+              <%= image_tag "icons/icon-header-01.png", class: "header-icon1", alt: "ICON" %>
             </a>
             <ul class="dropdown-menu">
               <li class="dropdown-item disabled"><%= t ".signin_as" %></li>
@@ -73,9 +72,9 @@
             </ul>
           </li>
         <% else %>
-          <%= link_to login_path, class: "header-wrapicon1 dis-block" do %>
-            <%= image_tag "icons/icon-header-01.png", class: "header-icon1", alt: "ICON" %>
-          <% end %>
+          <%= link_to t(".sign_up"), signup_path %>
+          <span class="linedivide1"></span>
+          <%= link_to t(".login"), login_path %>
         <% end %>
         <span class="linedivide1"></span>
         <div class="header-wrapicon2">
@@ -288,9 +287,6 @@
         <li class="item-menu-mobile">
           <%= link_to t(".follow"), "#" %>
         </li>
-        <li class="item-menu-mobile sale-noti">
-          <%= link_to t(".hot"), "#" %>
-
         </li>
         <li class="item-menu-mobile">
           <%= link_to t(".blog"), "#" %>
