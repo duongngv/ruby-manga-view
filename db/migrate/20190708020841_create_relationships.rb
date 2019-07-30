@@ -1,15 +1,16 @@
 class CreateRelationships < ActiveRecord::Migration[5.2]
   def change
     create_table :relationships do |t|
-      t.integer :manga_id
+      t.integer :comic_id
       t.integer :user_id
       t.integer :relationshipable_id
       t.string :relationshipable_type
 
       t.timestamps
     end
-    add_index :relationships, :manga_id
+    add_index :relationships, :comic_id
     add_index :relationships, :user_id
-    add_index :relationships, [:manga_id, :user_id], unique: true
+    add_index :relationships, [:comic_id, :user_id, :relationshipable_type],
+      unique: true, name: :following
   end
 end

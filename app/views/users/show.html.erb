@@ -22,7 +22,13 @@
         <% end %>
       </div>
       <ul class="posts">
-        <li><%= t "users.show.following" %> <span>195</span></li>
+        <li>
+          <%= t "users.show.following" %>
+          <%= link_to user_following_path(@user) do %>
+            <span><%= @user.following.size %></span>
+            <%= raw t ".list_follow" %>
+          <% end %>
+        </li>
       </ul>
       <h2 class="name"><%= @user.email %></h2>
     </div>

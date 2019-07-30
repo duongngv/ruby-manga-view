@@ -58,6 +58,12 @@ end
   end
 end
 
+comics = Comic.all
+user = User.first
+comics.each do |comic|
+  user.follow(comic)
+end
+
 Comic.create!(
   name: "ONE PIECE - ĐẢO HẢI TẶC",
   author: "Eiichiro Oda",

@@ -279,6 +279,7 @@ en:
     show:
       edit_btn: "Edit Profile"
       following: "following"
+      list_follow: "<strong> comic </strong>- show detail"
   categories:
     form:
       read: "Read more"
@@ -298,7 +299,6 @@ en:
       follow: "Follow"
       followers: "follwers"
       first_read: "Read First"
-      unfollow: "Unfollow"
       last_read: "Read Last"
       like: "Like"
       content: "Sumary"
@@ -308,6 +308,12 @@ en:
       tags: "Tags"
       by_admin: "By Admin"
       empty: ":D Coming soon!"
+    follow:
+      follow: "Follow"
+    unfollow:
+      unfollow: "Unfollow"
+    stats:
+      following: following
   chapters:
     show:
       home: "Home"

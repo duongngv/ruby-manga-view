@@ -89,11 +89,17 @@
                             <i class="fa fa-book"></i>&nbsp;<%= t ".first_read" %>
                           <% end %>
                         </li>
-                        <li class="li02">
-                          <%= link_to "#" do %>
-                            <i class="fa fa-heart"></i>&nbsp;<%= t ".unfollow" %>
-                          <% end %>
-                        </li>
+                        <% if logged_in? %>
+                          <%= render "follow_form", comic: @comic %>
+                        <% else %>
+                          <li class="li02">
+                            <%= link_to login_path, class: "pd-l-0" do %>
+                              <span class="btn-follow-parent">
+                                <i class="fa fa-heart-o"></i>&nbsp;<%= t ".follow" %>
+                              </span>
+                            <% end %>
+                          </li>
+                        <% end %>
                       </div>
                       <div class="col-md-5">
                         <li class="li04">

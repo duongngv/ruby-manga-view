@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2019_07_11_145354) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "comic_followers", force: :cascade do |t|
+  create_table "comic_follows", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -65,14 +65,14 @@ ActiveRecord::Schema.define(version: 2019_07_11_145354) do
   end
 
   create_table "relationships", force: :cascade do |t|
-    t.integer "manga_id"
+    t.integer "comic_id"
     t.integer "user_id"
     t.integer "relationshipable_id"
     t.string "relationshipable_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["manga_id", "user_id"], name: "index_relationships_on_manga_id_and_user_id", unique: true
-    t.index ["manga_id"], name: "index_relationships_on_manga_id"
+    t.index ["comic_id", "user_id", "relationshipable_type"], name: "following", unique: true
+    t.index ["comic_id"], name: "index_relationships_on_comic_id"
     t.index ["user_id"], name: "index_relationships_on_user_id"
   end
 

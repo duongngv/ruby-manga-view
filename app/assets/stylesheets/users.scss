@@ -262,30 +262,34 @@ a.btn_back {
   padding-top: 10px;
 }
 
-.li01 a {
-  background: $btn-read-first !important;
-}
-
-.li02 a {
-  background: $btn-follow !important;
-}
-
-.li03 a {
-  background: $btn-like !important;
-}
-
-.li04 a {
-  background: $btn-read-latest !important;
-}
-
 .liparent {
   margin-top: 10px;
   overflow: hidden;
+  .li01{
+    a {
+      background: $btn-read-first !important;
+    }
+  }
+  .li02{
+    span {
+      background: $btn-follow !important;
+    }
+  }
+  .li03{
+    a {
+      background: $btn-like !important;
+    }
+  }
+  .li04{
+    a {
+      background: $btn-read-latest !important;
+    }
+  }
   li {
     height: 38px;
     display: inline-block;
     vertical-align: middle;
-    a {
+    a, .btn-follow-parent {
       font-size: 20px;
       float: left;
       color: white !important;
@@ -584,4 +588,13 @@ h2.story-detail-title {
 
 .dropdown-toggle::after {
   display: none !important;
+}
+
+.btn-follow{
+  background: $btn-follow !important;
+  color: white
+}
+
+.pd-l-0{
+  padding-left: 0 !important;
 }
