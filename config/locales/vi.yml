@@ -5,7 +5,6 @@ vi:
   common:
     logo: "Ứng dụng mẫu"
     title: "Đọc truyện tranh online miễn phí"
-    welcome: "Deadline đang đến!"
     read_now: "Đọc ngay"
     not_found: "Không tìm thấy tài khoản"
     admin_require: "Bạn không thuộc về nơi này"
@@ -51,6 +50,7 @@ vi:
     header:
       home: "Trang chủ"
       login: "Đăng nhập"
+      sign_up: "Đăng ký"
       follow: "Theo dõi"
       category: "Thể loại"
       logout: "Đăng xuất"

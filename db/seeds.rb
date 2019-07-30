@@ -1,15 +1,15 @@
 User.create!(
   name: "Admin User",
   email: "admin@gmail.com",
-  password: "admin123",
-  password_confirmation: "admin123",
+  password: "123123",
+  password_confirmation: "123123",
   is_admin: true,
 )
 User.create!(
   name: "Normal User",
-  email: "example@gmail.com",
-  password: "12345678",
-  password_confirmation: "12345678",
+  email: "user@gmail.com",
+  password: "123123",
+  password_confirmation: "123123",
   is_admin: false,
 )
 
@@ -58,24 +58,6 @@ end
   end
 end
 
-30.times do
-  comic = Comic.create!(
-    name: Faker::Book.title,
-    author: Faker::Book.author,
-    description: Faker::Food.description,
-    publish_date: Faker::Time.between("2000-01-01", Time.now),
-    views: Faker::Number.between(1, 1000) * 789,
-    status: Faker::Number.between(0, 3),
-    category_id: Faker::Number.between(Category.first.id, Category.last.id),
-    remote_thumb_url: "https://fakeimg.pl/720x960/",
-  )
-  50.times do |n|
-    Chapter.create!(
-      name: "Chapter " << n.to_s << ": " << Faker::Book.title,
-      comic_id: comic.id,
-    )
-  end
-end
 Comic.create!(
   name: "ONE PIECE - ĐẢO HẢI TẶC",
   author: "Eiichiro Oda",

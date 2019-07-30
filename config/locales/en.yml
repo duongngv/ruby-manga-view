@@ -5,7 +5,6 @@ en:
   common:
     logo: "Sample App"
     title: "Read Manga Online For Free"
-    welcome: "Deadline is coming!"
     read_now: "Read now"
     not_found: "User not found"
     admin_require: "You dont't belong there!"
@@ -51,6 +50,7 @@ en:
     header:
       home: "Home"
       login: "Login"
+      sign_up: "Sign up"
       follow: "Follow"
       category: "Category"
       logout: "Logout"
