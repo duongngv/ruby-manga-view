@@ -265,6 +265,7 @@ vi:
     show:
       edit_btn: "Chỉnh sửa hồ sơ"
       following: "Đang theo dõi"
+      list_follow: "<strong> truyện </strong>- xem chi tiết"
   categories:
     form:
       read: "Đọc ngay"
@@ -284,7 +285,6 @@ vi:
       follow: "Theo dõi"
       followers: "người dã theo dõi"
       first_read: "Đọc từ đầu"
-      unfollow: "Hủy theo dõi"
       last_read: "Đọc tiếp"
       like: "Thích"
       content: "Nội dung"
@@ -294,6 +294,12 @@ vi:
       tags: "Thẻ"
       by_admin: "Đăng bởi Admin"
       empty: "Đã up tập nào đâu mà đòi có :v"
+    follow:
+      follow: "Theo dõi"
+    unfollow:
+      unfollow: "Hủy theo dõi"
+    stats:
+      following: theo dõi
   chapters:
     show:
       home: "Trang chủ"

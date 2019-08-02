@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :load_user, only: %i(show update edit)
+  before_action :load_user, :current_user, only: %i(show update edit)
   before_action :require_login, :correct_user, only: %i(edit update)
 
   def show; end

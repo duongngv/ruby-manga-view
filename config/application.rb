@@ -24,6 +24,7 @@ module RubyMangaView
     config.time_zone = "Hanoi"
     config.assets.paths << Rails.root.join("vendor", "assets", "fonts")
     config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
+    config.action_view.embed_authenticity_token_in_remote_forms = true
     Bundler.require *Rails.groups
     Config::Integrations::Rails::Railtie.preload
   end
