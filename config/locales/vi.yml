@@ -300,6 +300,10 @@ vi:
       unfollow: "Hủy theo dõi"
     stats:
       following: theo dõi
+    like:
+      like: "Thích"
+    unlike:
+      unlike: "Hủy thích"
   chapters:
     show:
       home: "Trang chủ"
@@ -307,3 +311,8 @@ vi:
       report_error: "Báo lỗi"
       turn_light: "Bật đèn"
       unfollow: "Huỷ theo dõi"
+  relationships:
+    load_comic:
+      not_found: "Không tìm thấy truyện!"
+    get_comic:
+      not_found: "Không tìm thấy truyện!"

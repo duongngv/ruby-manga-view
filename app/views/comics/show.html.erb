@@ -107,11 +107,17 @@
                             <i class="fa fa-paper-plane"></i>&nbsp;<%= t ".last_read" %>
                           <% end %>
                         </li>
-                        <li class="li03">
-                          <%= link_to "#" do %>
-                            <i class="fa fa-thumbs-up"></i>&nbsp;<%= t ".like" %>
-                          <% end %>
-                        </li>
+                        <% if logged_in? %>
+                          <%= render "like_form", comic: @comic %>
+                        <% else %>
+                          <li class="li03">
+                            <%= link_to login_path, class: "pd-l-0" do %>
+                              <span class="btn-follow-parent">
+                                <i class="fa fa-thumbs-o-up"></i>&nbsp;<%= t ".like" %>
+                              </span>
+                            <% end %>
+                          </li>
+                        <% end %>
                       </div>
                     </div>
                     <div class="row">
