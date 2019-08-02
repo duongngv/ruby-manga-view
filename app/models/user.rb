@@ -30,12 +30,10 @@ class User < ApplicationRecord
   end
 
   def follow comic
-    comic_following = ComicFollow.create
     Relationship.create(
       comic_id: comic.id,
       user_id: id,
-      relationshipable_id: comic_following.id,
-      relationshipable_type: "ComicFollow"
+      relationshipable: ComicFollow.create
     )
   end
 
@@ -56,6 +54,35 @@ class User < ApplicationRecord
   def following? comic
     following.each do |following|
       return true if following.comic.eql? comic
+    end
+    false
+  end
+
+  def like comic
+    Relationship.create(
+      comic_id: comic.id,
+      user_id: id,
+      relationshipable: Like.create
+    )
+  end
+
+  def unlike comic
+    return unless relationship = Relationship.find_by(
+      user_id: id,
+      comic_id: comic.id,
+      relationshipable_type: "Like"
+    )
+
+    return unless comic_like = Like.find_by(
+      id: relationship.relationshipable_id
+    )
+
+    likes.find_by(id: comic_like.id).destroy
+  end
+
+  def liked? comic
+    likes.each do |like|
+      return true if like.comic.eql? comic
     end
     false
   end

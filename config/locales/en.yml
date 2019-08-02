@@ -314,6 +314,10 @@ en:
       unfollow: "Unfollow"
     stats:
       following: following
+    like:
+      like: "Like"
+    unlike:
+      unlike: "Unlike"
   chapters:
     show:
       home: "Home"
@@ -325,3 +329,8 @@ en:
   post: "Post"
   commented: "Commented"
   comment_for: "Comment for"
+  relationships:
+    load_comic:
+      not_found: "Comic is not found!"
+    get_comic:
+      not_found: "Comic is not found!"

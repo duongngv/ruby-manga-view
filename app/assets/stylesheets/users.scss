@@ -276,7 +276,7 @@ a.btn_back {
     }
   }
   .li03{
-    a {
+    span {
       background: $btn-like !important;
     }
   }
@@ -289,11 +289,11 @@ a.btn_back {
     height: 38px;
     display: inline-block;
     vertical-align: middle;
-    a, .btn-follow-parent {
+    a, .btn-follow-parent, .btn-like-parent {
       font-size: 20px;
       float: left;
       color: white !important;
-      min-width: 145px;
+      min-width: 100px;
       border-radius: 290486px;
       padding-left: 1em;
       padding-right: 1em;
@@ -592,6 +592,10 @@ h2.story-detail-title {
 
 .btn-follow{
   background: $btn-follow !important;
+  color: white
+}
+.btn-like{
+  background: $btn-like !important;
   color: white
 }
 
