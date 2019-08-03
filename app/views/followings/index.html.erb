@@ -1,0 +1,16 @@
+<% provide :title, t(".title") %>
+<% provide :unfollow, t(".unfollow") %>
+
+<body class="animsition">
+  <div class="container story-list p-t-20">
+    <div class="title-list"><%= t ".followings" %></div>
+      <div class="tile is-ancestor">
+        <div class="tile is-vertical is-parent">
+          <ul class="list-stories grid-6" id="unfollow">
+            <%= render "followings/comic", object: @followes %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

@@ -221,6 +221,10 @@ en:
     error_messages:
       form_error: "The form contains "
       error: "error"
+    follow:
+      follow: "Follow"
+    unfollow:
+      unfollow: "Unfollow"
   activerecord:
     attributes:
       comic:
@@ -278,8 +282,9 @@ en:
       noti_login: "Please login"
     show:
       edit_btn: "Edit Profile"
-      following: "following"
+      following: "Following"
       list_follow: "<strong> comic </strong>- show detail"
+      like: "Liked"
   categories:
     form:
       read: "Read more"
@@ -308,6 +313,7 @@ en:
       tags: "Tags"
       by_admin: "By Admin"
       empty: ":D Coming soon!"
+      ago: "ago"
     follow:
       follow: "Follow"
     unfollow:
@@ -341,3 +347,17 @@ en:
       delete_confirm: "You sure?"
     correct_comment:
       not_found: "Comment not found!!"
+  followings:
+    index:
+      title: "Followings"
+      followings: "Comic were following"
+      unfollow: "Unfollow"
+    comic:
+      ago: "ago"
+      hot: "Hot"
+      author: "Author"
+      status: "Status"
+      completed: "Completed"
+      up_dating: "Ongoing"
+      views: "Views"
+      number_following: "Following"

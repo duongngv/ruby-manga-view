@@ -219,6 +219,10 @@ vi:
     error_messages:
       form_error: "Biểu mẫu này chứa "
       error: "lỗi"
+    follow:
+      follow: "Theo Dõi"
+    unfollow:
+      unfollow: "Hủy Theo Dõi"
   activerecord:
     errors:
       models:
@@ -266,6 +270,7 @@ vi:
       edit_btn: "Chỉnh sửa hồ sơ"
       following: "Đang theo dõi"
       list_follow: "<strong> truyện </strong>- xem chi tiết"
+      like: "Đã thích"
   categories:
     form:
       read: "Đọc ngay"
@@ -294,6 +299,7 @@ vi:
       tags: "Thẻ"
       by_admin: "Đăng bởi Admin"
       empty: "Đã up tập nào đâu mà đòi có :v"
+      ago: "trước"
     follow:
       follow: "Theo dõi"
     unfollow:
@@ -327,3 +333,17 @@ vi:
       delete_confirm: "Bạn chắc chứ?"
     correct_comment:
       not_found: "Không tìm thấy bình luận!!"
+  followings:
+    index:
+      title: "Theo dõi"
+      followings: "Truyện Đang Theo Dõi"
+      unfollow: "Bỏ Theo Dõi"
+    comic:
+      ago: "trước"
+      hot: "Hot"
+      author: "Tên giả"
+      status: "Tình trạng"
+      completed: "Đã hoàn thành"
+      up_dating: "Đang Cập Nhật"
+      views: "Lượt xem"
+      number_following: "Lượt theo dõi"

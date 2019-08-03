@@ -1,0 +1,5 @@
+<%= link_to relationships_path( init_follow, comic_id: comic.id,
+    follow: Settings.follow), method: :post, remote: true,
+    class: "block2-btn-addwishlist hov-pointer trans-0-4" do %>
+  <i class="fa fa-heart-o icon_heart" title="<%= t ".follow" %>"></i>
+<% end %>

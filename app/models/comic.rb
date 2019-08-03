@@ -3,6 +3,12 @@ class Comic < ApplicationRecord
                   views status category_id).freeze
 
   has_many :relationships
+  has_many :likes, through: :relationships, source: :relationshipable,
+                  source_type: :Like
+  has_many :following, through: :relationships,
+                      source: :relationshipable,
+                      source_type: :ComicFollow
+  has_many :comments, dependent: :destroy
   has_many :chapters, dependent: :destroy
   belongs_to :category
 
