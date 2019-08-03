@@ -78,7 +78,7 @@ document.addEventListener('turbolinks:load', function () {
       if (files) {
         [].forEach.call(files, readAndPreview);
       }
-    })
+    });
   });
   $('.story-see-footer').hide();
   var prevScrollpos = window.pageYOffset;
@@ -91,5 +91,16 @@ document.addEventListener('turbolinks:load', function () {
       document.getElementById('nav-scroll').style.bottom = '-100px';
     }
     prevScrollpos = currentScrollpos;
-  }
+  };
+  $('.story-item').children('.more-info').hide();
+  $('.story-item').children('.more-info').attr("visibility", "hidden");
+  $('.story-item').hover(
+    function(){
+      $(this).children('.more-info').show();
+      $(this).children('.more-info').attr("visibility", "visible");
+    }, function(){
+      $(this).children('.more-info').hide();
+      $(this).children('.more-info').attr("visibility", "hidden");
+    }
+  );
 });

@@ -316,3 +316,16 @@ vi:
       not_found: "Không tìm thấy truyện!"
     get_comic:
       not_found: "Không tìm thấy truyện!"
+  followings:
+    index:
+      title: "Theo dõi"
+      followings: "Truyện Đang Theo Dõi"
+      unfollow: "Bỏ Theo Dõi"
+      ago: "trước"
+      hot: "Hot"
+      author: "Tên giả"
+      status: "Tình trạng"
+      completed: "Đã hoàn thành"
+      up_dating: "Đang Cập Nhật"
+      views: "Lượt xem"
+      number_following: "Lượt theo dõi"

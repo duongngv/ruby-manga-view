@@ -330,3 +330,16 @@ en:
       not_found: "Comic is not found!"
     get_comic:
       not_found: "Comic is not found!"
+  followings:
+    index:
+      title: "Followings"
+      followings: "Comic were following"
+      unfollow: "Unfollow"
+      ago: "ago"
+      hot: "Hot"
+      author: "Author"
+      status: "Status"
+      completed: "Completed"
+      up_dating: "Ongoing"
+      views: "Views"
+      number_following: "Following"

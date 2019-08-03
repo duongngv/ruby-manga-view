@@ -24,7 +24,7 @@
       <ul class="posts">
         <li>
           <%= t "users.show.following" %>
-          <%= link_to user_following_path(@user) do %>
+          <%= link_to followings_path do %>
             <span><%= @user.following.size %></span>
             <%= raw t ".list_follow" %>
           <% end %>

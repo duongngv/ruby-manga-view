@@ -8,8 +8,8 @@ Rails.application.routes.draw do
     get "signup", to: "users#new"
     post "signup", to: "users#create"
 
+    resources :followings, only: :index
     resources :users, only: %i(show edit create update) do
-      get :following
     end
     resources :categories, only: %i(index show)
     resources :comics, only: %i(index show) do
