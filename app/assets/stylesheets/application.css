@@ -14,4 +14,5 @@
  *= require main_login
  *= require static_pages
  *= require users
+ *= require comments
  */

@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
       if current_user.is_admin?
         redirect_to admin_root_path
       else
-        redirect_to @user
+        redirect_back_or @user
       end
     else
       flash.now[:danger] = t ".error"

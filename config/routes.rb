@@ -16,6 +16,7 @@ Rails.application.routes.draw do
       resources :chapters, only: %i(index show)
     end
     resources :relationships, only: %i(create destroy)
+    resources :comments
 
     namespace :admin do
       root "/admin#index"
