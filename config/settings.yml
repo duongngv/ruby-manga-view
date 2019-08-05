@@ -13,6 +13,7 @@ category:
     max_length: 255
   per_page: 8
 comment:
+  page_comment: 10
   content:
     max_length: 500
 comic:

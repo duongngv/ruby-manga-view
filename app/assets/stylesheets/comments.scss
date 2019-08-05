@@ -1,4 +1,6 @@
 $white : #fff;
+$gray: #aaa;
+$blue: #3498db;
 
 .wrap-comments {
   width: 100%;
@@ -6,14 +8,17 @@ $white : #fff;
   margin: 20px 0;
   border-radius: 6px;
   float: left;
-  .comment-head .head-content {
-    float: left;
-    padding-left: 12px;
-    font-size: 22px;
-    font-weight: 400;
-    border-left: 5px solid #3f94d5;
-    font-family: utmcons;
-    margin: 20px 10px 20px 30px;
+  .comment-head {
+    display: block;
+    .head-content {
+      float: left;
+      padding-left: 12px;
+      font-size: 22px;
+      font-weight: 400;
+      border-left: 5px solid #3f94d5;
+      font-family: utmcons;
+      margin: 20px 10px 20px 30px;
+  }
   }
   .post-comment {
     width: 100%;
@@ -27,6 +32,50 @@ $white : #fff;
     }
     .button-comment {
       text-align: right;
+    }
+  }
+  .comments-list {
+    width: 100%;
+    float: left;
+    padding: 0 30px 30px;
+    nav {
+      margin: 10px 20px 0;
+    }
+    .comment {
+      background-color: $white;
+      border-radius: 3px;
+      padding: 10px 0;
+      list-style: none;
+      border: none;
+
+      .comment-content {
+        height: 100%;
+        padding-top: 10px;
+        margin-left: 75px;
+        word-wrap: break-word;
+        .delete-comment {
+          font-weight: normal;
+        }
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        float: left;
+        margin: 10px;
+      }
+
+      a {
+        text-decoration: none;
+        color: $blue;
+        font-weight: bold;
+      }
+
+      .timestamp {
+        color: $gray;
+        display: block;
+      }
     }
   }
 }

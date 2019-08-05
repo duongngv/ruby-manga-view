@@ -14,8 +14,8 @@
               <meta itemprop="position" content="1">
             </li>
             <li itemprop="itemListElement">
-              <%= link_to "#" do %>
-                <span itemprop="name">Comics Name here</span>
+              <%= link_to @chapter.comic do %>
+                <span itemprop="name"><%= @chapter.comic.name %></span>
               <% end %>
               <meta itemprop="position" content="2">
             </li>
@@ -28,7 +28,7 @@
           </ol>
         </div>
         <h1 class="detail-title">
-          <%= link_to "Comic Name here", "#" %> - <span></span>
+          <%= link_to @chapter.comic.name, @chapter.comic %> - <span></span>
           <%= @chapter.name %>
         </h1>
       </div>
@@ -47,11 +47,11 @@
         </div>
         <% if logged_in? %>
           <div class="post-comment">
-            <%= form_for @comment do |f| %>
+            <%= form_for @comment, remote: true do |f| %>
               <%= render "shared/error_messages", object: f.object %>
               <%= hidden_field_tag :chapter_id, @chapter.id %>
 
-              <%= f.text_area :content, placeholder: t("add_comment"), class: "form-control comment-content" %>
+              <%= f.text_area :content, placeholder: t("add_comment"), class: "form-control comment-content", id: "comment-content" %>
 
               <div class="button-comment">
                 <%= f.submit t("post"), class: "btn btn-primary" %>
@@ -59,6 +59,10 @@
             <% end %>
           </div>
         <% end %>
+        <div class="comments-list" id="comments-list">
+          <%= render @comments %>
+          <%= paginate @comments, theme: "twitter-bootstrap-4", remote: true %>
+        </div>
       </div>
     </div>
   </div>

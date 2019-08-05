@@ -6,8 +6,10 @@ class CommentsController < ApplicationController
     @comment.user_id = current_user.id
 
     if @comment.save
-      flash[:success] = t "commented"
-      redirect_to comic_chapter_url @chapter.comic, @chapter
+      respond_to do |format|
+        format.html{redirect_to comic_chapter_url @chapter.comic, @chapter}
+        format.js
+      end
     else
       render "chapters/show"
     end
