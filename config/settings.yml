@@ -50,3 +50,4 @@ factories:
   comment:
     content: 500
 follow: "Follow"
+like: "Like"
