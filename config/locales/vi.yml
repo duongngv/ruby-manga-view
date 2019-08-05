@@ -311,12 +311,19 @@ vi:
       report_error: "Báo lỗi"
       turn_light: "Bật đèn"
       unfollow: "Huỷ theo dõi"
-  add_comment: "Thêm bình luận ..."
-  post: "Đăng"
-  commented: "Đã bình luận"
-  comment_for: "Bình luận về"
+      add_comment: "Thêm bình luận ..."
+      post: "Đăng"
+      comment_for: "Bình luận về"
   relationships:
     load_comic:
       not_found: "Không tìm thấy truyện!"
     get_comic:
       not_found: "Không tìm thấy truyện!"
+  comments:
+    destroy:
+      delete_failed: "Xóa bình luận thất bại!!"
+    comment:
+      del: "Xóa"
+      delete_confirm: "Bạn chắc chứ?"
+    correct_comment:
+      not_found: "Không tìm thấy bình luận!!"
