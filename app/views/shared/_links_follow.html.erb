@@ -1,0 +1,7 @@
+<div class="link_form" id="<%= comic.id %>">
+  <% if current_user.following? comic %>
+    <%= render "shared/unfollow", comic: comic %>
+  <% else %>
+    <%= render "shared/follow", comic: comic %>
+  <% end %>
+</div>

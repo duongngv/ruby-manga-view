@@ -21,15 +21,16 @@ class RelationshipsController < ApplicationController
 
   def destroy
     if follow?
+      @followes = current_user.following.recently
       current_user.unfollow @comic
       respond_to do |format|
-        format.html{redirect_to @comic}
+        format.html{redirect_back_or @comic}
         format.js{render "unfollow.js.erb"}
       end
     elsif like?
       current_user.unlike @comic
       respond_to do |format|
-        format.html{redirect_to @comic}
+        format.html{redirect_back_or @comic}
         format.js{render "unlike.js.erb"}
       end
     end

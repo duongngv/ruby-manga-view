@@ -7,7 +7,6 @@ class ComicsController < ApplicationController
   end
 
   def show
-    @category = Category.find_by id: @comic.category_id
     @chapters = @comic.chapters.recent_upload.page(params[:page])
                       .per Settings.chapter.for_user_per_page
     @trendding = Comic.popular.page.per Settings.comic.trendding_right

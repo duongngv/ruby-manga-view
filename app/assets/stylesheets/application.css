@@ -15,4 +15,5 @@
  *= require static_pages
  *= require users
  *= require comments
+ *= require followings
  */

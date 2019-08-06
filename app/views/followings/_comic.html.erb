@@ -1,0 +1,68 @@
+<% if object.present? %>
+  <% object.each_with_index  do |follow, index| %>
+    <li>
+      <% if (index+1) % 4 == 0 %>
+        <div class="story-item show-left open">
+      <% else %>
+        <div class="story-item open">
+      <% end %>
+      <span class="remove-subscribe" title="<%= yield :unfollow %>">
+        <%= link_to relationship_path(load_comic_following(follow.comic), follow: Settings.follow), method: :delete, remote: true do %>
+          <i class="fa fa-times-circle-o"></i>
+        <% end %>
+      </span>
+      <%= link_to comic_path(follow.comic), class: "comic-follow" do %>
+        <% if follow.comic.thumb.present? %>
+          <%= image_tag follow.comic.thumb.url, class: "story-cover" %>
+        <% else %>
+          <%= image_tag "comic-default.png", class: "story-cover" %>
+        <% end %>
+      <% end %>
+      <div class="top-notice">
+        <% if follow.comic.chapters.present? %>
+          <span class="time-ago">
+            <%= distance_of_time_in_words(Time.now, follow.comic.chapters.last.updated_at) %>
+            <%= t ".ago" %>
+          </span>
+        <% end %>
+        <% if follow.comic.status == "hot" %>
+          <span class="type-label hot"><%= t ".hot" %></span>
+        <% end %>
+      </div>
+      <h3 class="title-book">
+        <%= link_to follow.comic.name, comic_path(follow.comic) %>
+      </h3>
+      <div class="more-info">
+        <div class="title-more">
+          <%= follow.comic.name %>
+        </div>
+        <div class="title-more-other">
+          <strong><%= t ".author" %>: </strong>
+          <%= follow.comic.author %>
+        </div>
+        <p class="info">
+          <strong><%= t ".status" %>: </strong>
+          <% if "finished" == follow.comic.status %>
+            <span class="text-danger"><%= t ".completed" %></span>
+          <% else %>
+            <span class="text-primary"><%= t ".up_dating" %></span>
+          <% end %>
+        </p>
+        <p class="info">
+          <strong><%= t ".views" %>: </strong>
+          <%= follow.comic.views %>
+        </p>
+        <p class="info">
+          <strong><%= t ".number_following" %>: </strong>
+          <%= total_follow(follow.comic) %>
+        </p>
+        <div class="list-tags">
+          <%= link_to follow.comic.category.name, category_path(follow.comic.category), class: "blue" %>
+        </div>
+        <div class="excerpt">
+          <%= follow.comic.description %>
+        </div>
+      </div>
+    </li>
+  <% end %>
+<% end %>

@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
       flash[:success] = t ".welcome"
       log_in @user
       if current_user.is_admin?
-        redirect_to admin_root_path
+        redirect_back_or admin_root_path
       else
         redirect_back_or @user
       end

@@ -10,9 +10,15 @@
               <h1 class="title-detail">
                 <%= @comic.name %>
               </h1>
-              <time class="small">
-                [<%= t ".updated_at" %>: <%= @comic.updated_at.to_date %>]
-              </time>
+              <% if @comic.chapters.present? %>
+                <time class="small">
+                  [
+                    <%= t ".updated_at" %>:
+                    <%= distance_of_time_in_words(Time.now, @comic.chapters.last.updated_at) %>
+                    <%= t ".ago" %>
+                  ]
+                </time>
+              <% end %>
               <div class="detail-info">
                 <div class="row">
                   <div class="col-md-5 col-xs-5 col-image">
@@ -54,30 +60,31 @@
                           <i class="fa fa-tags"></i>&nbsp;<%= t ".statistic" %>
                         </p>
                         <p class="col-md-8 col-xs-8">
-                          <span class="sp01"><i class="fa fa-thumbs-up"></i>
-                          <span class="sp02 number-like">5339&emsp;
-                          <span class="sp01"><i class="fa fa-heart"></i>
-                          <span class="sp02">37,591&emsp;
+                          <span class="sp01">
+                            <i class="fa fa-thumbs-up"></i>
+                          </span>
+                          <span class="sp02 number-like">
+                            <%= @comic.likes.size %>&emsp;
+                          </span>
+                          <span class="sp01">
+                            <i class="fa fa-heart"></i>
+                          </span>
+                          <span class="sp02">
+                            <%= @comic.following.size %>&emsp;
+                          </span>
+                          <span class="sp01">
+                            <i class="fa fa fa-eye"></i>
+                          </span>
+                          <span class="sp02">
+                            <%= @comic.views %>&emsp;
+                          </span>
                         </p>
                       </li>
-                      <li class="row">
-                        <p class="name col-md-4 col-xs-4 text-custom-detail">
-                          <i class="fa fa-eye"></i>&nbsp;<%= t ".views" %>
-                        </p>
-                        <p class="col-md-8 col-xs-8"><%= @comic.views %>&emsp;</p>
-                      </li>
-                      <li class="row">
-                        <p class="name col-md-4 col-xs-4 text-custom-detail">
-                          <i class="fa fa-heart"></i>&nbsp;<%= t ".follow" %>
-                        </p>
-                        <p class="col-md-8 col-xs-8 "><b>487</b>
-                          <span class="text-secondary"> <%= t ".followers" %></span>
-                        </p>
-                      </li>
-                      <li class="kind row">
+                      <li class="kind row m-t-20">
                         <p class="name col-md-12 col-xs-12 text-custom-detail">
-                          <%= link_to "#", class: "btn btn-sm btn-outline-secondary" do %>
-                            <%= @category.name %>
+                          <%= link_to category_path(@comic.category),
+                            class: "btn btn-sm btn-outline-secondary" do %>
+                            <%= @comic.category.name %>
                           <% end %>
                         </p>
                       </li>
@@ -123,7 +130,8 @@
                     <div class="row">
                       <div class="detail-content">
                         <h3 class="list-title">
-                          <i class="fa fa-file-text-o"></i>&nbsp;<%= t ".content" %>
+                          <i class="fa fa-file-text-o"></i>&nbsp;
+                          <%= t ".content" %>
                         </h3>
                         <p><%= @comic.description %></p>
                       </div>
@@ -144,7 +152,7 @@
                   <%= t ".by_admin" %><span class="m-l-3 m-r-6">|</span>
                 </span>
                 <span>
-                  <%= @category.name %><span class="m-l-3 m-r-6">|</span>
+                  <%= @comic.category.name %><span class="m-l-3 m-r-6">|</span>
                 </span>
                 <span>8 <%= t ".comment" %></span>
               </div>

@@ -1,1 +1,15 @@
 $('#follow_form').html('<%= j render("comics/follow", comic: @comic) %>');
+$('.block2-overlay').children('#<%= @comic.id %>').html('<%= j render("shared/follow", comic: @comic) %>');
+$('#unfollow').html('<%= j render("followings/comic", object: @followes) %>');
+
+$('.story-item').children('.more-info').hide();
+$('.story-item').children('.more-info').attr("visibility", "hidden");
+$('.story-item').hover(
+  function(){
+    $(this).children('.more-info').show();
+    $(this).children('.more-info').attr("visibility", "visible");
+  }, function(){
+    $(this).children('.more-info').hide();
+    $(this).children('.more-info').attr("visibility", "hidden");
+  }
+);
